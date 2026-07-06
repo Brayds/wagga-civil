@@ -1,13 +1,35 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-grotesk@500,600,700&display=swap');
 @import "tailwindcss";
 
-@theme inline {
+@theme {
+  --color-ink: #17150F;
+  --color-brand: #E4711E;
+  --color-brand-hi: #F08A24;
+  --color-concrete: #F4F1EA;
+  --color-sand: #E7E2D8;
+  --color-warm: #6B665C;
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: "Clash Grotesk", "Archivo", system-ui, sans-serif;
 }
 
 /* Brochure site: one consistent light look for every visitor (no auto dark flip). */
 body {
   background: #ffffff;
-  color: #171717;
+  color: var(--color-ink);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  line-height: 1.03;
+}
+
+::selection { background: var(--color-brand); color: #fff; }
+
+/* Amber+charcoal hazard/survey chevron rule — the signature motif */
+.chevron-rule {
+  height: 12px;
+  background-image: repeating-linear-gradient(45deg,
+    var(--color-brand) 0 16px, var(--color-ink) 16px 32px);
 }

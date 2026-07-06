@@ -2,24 +2,25 @@ import { site } from "@/content/site";
 
 export function SiteFooter() {
   return (
-    <footer id="contact" className="border-t border-neutral-800 bg-neutral-950 text-neutral-300">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
+    <footer id="contact" className="bg-ink text-neutral-300">
+      <div className="chevron-rule" />
+      <div className="mx-auto grid max-w-[1120px] gap-10 px-6 py-16 md:grid-cols-3">
         <div>
-          <p className="text-lg font-bold text-white">{site.name}</p>
+          <p className="font-display text-xl font-bold text-white">{site.name}</p>
           <p className="mt-3 max-w-xs text-sm leading-6 text-neutral-400">
             {site.tagline}. Family-owned, over a decade of local experience.
           </p>
         </div>
 
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-amber-500">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-hi">
             Get in touch
           </p>
           <ul className="mt-3 space-y-2 text-sm">
             {site.contacts.map((c) => (
               <li key={c.phone}>
                 <a href={`tel:${c.phone.replace(/\s/g, "")}`} className="hover:text-white">
-                  {c.name} — {c.phone}
+                  <span className="text-white">{c.name}</span> — {c.phone}
                 </a>
               </li>
             ))}
@@ -37,7 +38,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-amber-500">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-hi">
             Service areas
           </p>
           <p className="mt-3 text-sm leading-7 text-neutral-400">
@@ -46,8 +47,8 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="border-t border-neutral-800">
-        <div className="mx-auto max-w-6xl px-4 py-6 text-xs text-neutral-500 sm:px-6">
+      <div className="border-t border-white/10">
+        <div className="mx-auto max-w-[1120px] px-6 py-6 text-xs text-neutral-500">
           © {site.name}. Serving Wagga Wagga and the Riverina.
         </div>
       </div>
