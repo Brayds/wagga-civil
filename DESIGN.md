@@ -3,56 +3,47 @@
 ## Product Context
 - **What this is:** Marketing/brochure site for a merged, family-owned civil construction, earthworks and plumbing/gas contractor.
 - **Who it's for:** Riverina builders, developers, rural property owners (big civil/earthworks) and homeowners/businesses (plumbing & gas).
-- **Space/industry:** Local civil/earthworks + trades. Peers: Kennedy Bros, Burgess, Subterra Civil, Terracon (dated blue/template sites); Plumbing Bros, Aquafix.
-- **Project type:** Marketing site (lead-gen, local SEO).
+- **Its job:** A trust-check. Trades like this win on referrals; the site exists so someone who got the name can verify these are the real deal. Lead with proof (real machines, real jobs, real local facts), not sales copy.
+- **Project type:** Marketing site (lead-gen, local SEO). Pillar-and-spoke: `/services` hub + one page per service.
 
-## Aesthetic Direction
-- **Direction:** Hybrid — "playful concept, serious craft." Grounded/industrial base with one signature personality moment.
-- **Decoration level:** Intentional — hazard/survey motif used sparingly (amber+charcoal chevron rule, uppercase signage labels, thin amber rules). Not expressive.
-- **Mood:** Grounded, capable, family-owned. "Big civil jobs. Small enough to care." Credible enough for a builder handing over serious money; warm enough for a homeowner.
-- **Memorable thing:** A serious, established local crew you'd trust with a big civil job — that also does the plumbing.
-- **Signature device:** A **3D render of a machine on a transparent background** in the hero (client-supplied). Replaces the earlier toy-hero idea. Real job photography carries proof below.
+## Aesthetic Direction — "Field Notebook"
+- **Direction:** Editorial, ink-on-paper. The site is built like a civil contractor's field notebook. This is the deliberate escape from the templated Tailwind look that was rejected.
+- **Thesis:** The hero is the client's hand-drawn blue-ballpoint sketch of a Kobelco excavator on a Riverina field. The whole palette and paper tone are sampled from that scan, so the page and the drawing are literally the same ink and paper.
+- **Mood:** Grounded, crafted, human (family business) but precise and engineered (takes big contracts). "Big civil jobs. Small enough to care."
+- **Signature device:** A hand-drawn ink **ground line** (the horizon from the sketch) that threads down the page as the section divider — dipping into a cut, rising into a fill. Earthworks, literally drawn. Component: `app/components/GroundLine.tsx`.
+- **Proof, not polish:** Real job photos are shown as "field records" — mounted with a thin ink frame + IBM Plex Mono caption, lightly graded to sit with the illustration. Never stock-styled cards.
+
+## Palette (sampled from the sketch)
+- `--paper: #ede5d6` — warm cream, the sketchbook paper.
+- `--paper-2: #e4dac7` — deeper mat / alternating band.
+- `--ink: #1b1e43` — body ink (deepened from the pen blue for AA contrast).
+- `--ink-deep: #141733` — dark surfaces (about band, contact, footer).
+- `--pen: #373887` — the ballpoint blue itself; used for the ground line, labels, hairlines.
+- `--hivis: #ff6a13` — safety orange, the trade's own colour. The single spark: primary CTAs and accents only. **Not** terracotta.
+- `--stone: #7c7566` — warm secondary text.
+- One light look for every visitor. No dark-mode flip.
 
 ## Typography
-- **Display/Hero:** Clash Grotesk (600/700) — bold, engineered, confident; reads as infrastructure, not template. Load via Fontshare.
-- **Body:** Geist (400–600) — clean, technical, already in the scaffold. Google Fonts.
-- **UI/Labels:** Geist, uppercase, letter-spacing .16–.22em — site-signage / survey-marker feel for eyebrows and section labels.
-- **Data/Tables:** n/a (marketing site).
-- **Code:** n/a.
-- **Loading:** Fontshare `clash-grotesk@500,600,700`; Google Fonts `Geist:wght@400;500;600;700`. Preconnect both.
-- **Scale (px):** hero 52 / h2 34 / h3 20 / lead 18 / body 16 / small 13 / eyebrow 12. Display line-height 1.02, tracking -0.02em.
+- **Display + body are one superfamily: Archivo** (variable, loaded with the `wdth` axis). Display runs expanded via `font-stretch: 125%` for an engineered/signage feel; body is regular width. Loaded via `next/font/google` in `app/fonts.ts` → `--font-archivo`.
+- **Labels: IBM Plex Mono** (`--font-mono`) — spec-sheet feel for phone numbers, service tags (S–01…S–07), fleet notes, captions, eyebrows.
+- No serifs. No Inter/Roboto/system defaults. The type stays quiet so the illustration carries the personality.
 
-## Color
-- **Approach:** Restrained — one accent (amber) + earthy neutrals. Color is meaningful, not decorative.
-- **Ink (primary):** `#17150F` — bitumen/soil near-black. Text, dark sections, hero overlay.
-- **Accent (amber):** `#E4711E` (hover/tint `#F08A24`) — machinery/hi-vis, used for CTAs, eyebrows, rules. Use with control; never as large flat fills.
-- **Neutrals:** warm concrete off-white `#F4F1EA`, concrete `#E7E2D8`, warm grey `#6B665C`. Warm greys, NOT cool.
-- **Semantic:** success `#3F7D3A`, warning `#E4711E`, error `#B23A2A`, info `#3A5A78`.
-- **Dark mode:** none — one consistent light look for every visitor (a brochure site should not auto-flip).
-
-## Spacing
-- **Base unit:** 8px.
-- **Density:** comfortable-to-spacious. Generous section padding (64–96px), strong vertical rhythm.
-- **Scale:** 2xs(2) xs(4) sm(8) md(16) lg(24) xl(32) 2xl(48) 3xl(64) 4xl(96).
-
-## Layout
-- **Approach:** Grid-disciplined with big full-bleed photography and one editorial hero.
-- **Grid:** 12-col desktop / 6-col tablet / 4-col mobile. Service cards 3-up desktop, 2-up tablet, 1-up mobile.
-- **Max content width:** 1120px.
-- **Border radius:** sm 8px, md 12px, lg 16px, pill 999px. Cards md; buttons pill; framed media lg.
-- **Signature hero:** left = eyebrow + big Clash headline + lead + amber CTA; right = 3D machine render (transparent PNG) on a charcoal block with an amber+charcoal chevron rule along the bottom edge.
-
-## Motion
-- **Approach:** Minimal-functional → intentional. Subtle fade/translate-up on section entrance; image hover scale 1.03. Grounded, never flashy.
-- **Easing:** enter ease-out, exit ease-in, move ease-in-out.
-- **Duration:** micro 80ms, short 180ms, medium 300ms, long 500ms.
+## Layout & motion
+- Editorial, left-aligned, generous. Content max-width 1220px; hero can be near-full-bleed.
+- Numbered devices (S–01…) are real indices, not decoration.
+- Motion is one restrained scroll-reveal (`app/components/Reveal.tsx`), progressive-enhancement and fail-safe: content ships visible, `prefers-reduced-motion` respected.
 
 ## Assets
-- **Real job photography** (the proof): `_source/images/` (66 real WhatsApp job photos) + Prospec/Joll's scrapes. Prefer real work over stock.
-- **Hero machine render:** client-supplied 3D machine on transparent background (pending). Placeholder until delivered.
+- Hero: `public/images/hero-sketch.jpg` (client's ink drawing).
+- Real job photos treated and stored in `public/images/work/` (see `scratchpad/photos.py` recipe: light desaturate + warm paper tint, consistent crops).
+
+## SEO
+- `lib/seo.ts` centralises metadata + JSON-LD (`GeneralContractor` LocalBusiness, `Service`, `WebSite`, `BreadcrumbList`).
+- `app/sitemap.ts`, `app/robots.ts`, `app/manifest.ts`. Every page sets canonical + Open Graph.
+
+## Guardrail
+This system replaced the earlier "Direction C" (Clash Grotesk + amber/charcoal, chevron rule, pending 3D machine render), which the client rejected as templated. Do not reintroduce it. Do not deviate from the Field Notebook system without explicit user approval.
 
 ## Decisions Log
-| Date | Decision | Rationale |
-|------|----------|-----------|
-| 2026-07-06 | Initial design system created (Direction C — Hybrid) | /design-consultation; user chose hybrid over grounded/full-playful. Beats dated-blue competitors; render = personality, real photos = credibility. |
-| 2026-07-06 | Dropped toy hero; 3D machine render (transparent PNG) instead | User preference — keeps personality without underselling big civil jobs. |
+- 2026-07-06: Client rejected Direction C as templated ("if I gave this to my client, I would be fired").
+- 2026-07-06: New direction "Field Notebook" approved from a one-page mockup built on the client's excavator sketch. Full site built on it: homepage, `/services` hub, 7 SEO service pages, `/about`, full metadata + JSON-LD + sitemap/robots.
