@@ -216,7 +216,7 @@ figure.rec .cap b { color: var(--ink); font-weight: 600; }
 .site-footer .fine { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-top: 1px solid rgba(154, 153, 184, 0.2); padding-top: 22px; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase; color: #8887a8; }
 
 /* ---------- service page ---------- */
-.svc-hero { padding: 44px 0 20px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 46px; align-items: center; }
+.svc-hero { padding-block: 48px 24px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 46px; align-items: center; }
 .crumb { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--stone); margin-bottom: 22px; display: flex; gap: 10px; flex-wrap: wrap; }
 .crumb a:hover { color: var(--hivis); }
 .svc-hero h1 { font-size: clamp(2.3rem, 5vw, 4rem); margin: 0 0 18px; max-width: 16ch; }
@@ -279,7 +279,7 @@ figure.rec .cap b { color: var(--ink); font-weight: 600; }
   .contact-grid { grid-template-columns: 1fr; }
   .fleet-list .row { grid-template-columns: 44px 1fr; }
   .fleet-list .row .fs { grid-column: 2; }
-  .svc-hero { grid-template-columns: 1fr; gap: 26px; padding-top: 30px; }
+  .svc-hero { grid-template-columns: 1fr; gap: 26px; padding-block: 34px 8px; }
   .svc-body { grid-template-columns: 1fr; gap: 34px; }
   .scope { position: static; }
   .related-grid, .hub-grid { grid-template-columns: 1fr; }
