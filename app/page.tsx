@@ -1,65 +1,140 @@
 import Image from "next/image";
+import { site, services, fleet } from "@/content/site";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <>
+      {/* Hero */}
+      <section className="relative isolate overflow-hidden bg-neutral-950 text-white">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          src="/images/hero-earthworks.jpg"
+          alt="Excavator working on a Riverina earthworks site"
+          fill
           priority
+          className="object-cover opacity-40"
+          sizes="100vw"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+        <div className="relative mx-auto max-w-6xl px-4 py-28 sm:px-6 sm:py-36">
+          <p className="text-sm font-semibold uppercase tracking-wider text-amber-500">
+            Wagga Wagga &amp; the Riverina
+          </p>
+          <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+            Civil, earthworks, plumbing &amp; gas — one trusted local team.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-200">
+            {site.name} brings together over a decade of civil construction and
+            excavation with expert plumbing and gas. From detailed excavation and
+            road construction to hot water and blocked drains, no job is too big or
+            small.
+          </p>
+          <div className="mt-9 flex flex-wrap gap-4">
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href={`tel:${site.phone.replace(/\s/g, "")}`}
+              className="rounded-full bg-amber-500 px-6 py-3 text-base font-semibold text-neutral-950 transition-colors hover:bg-amber-400"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              Call {site.phone}
+            </a>
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#services"
+              className="rounded-full border border-white/25 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-white/10"
             >
-              Learning
-            </a>{" "}
-            center.
+              Our services
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section id="services" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <div className="max-w-2xl">
+          <h2 className="text-3xl font-bold tracking-tight text-neutral-900">
+            What we do
+          </h2>
+          <p className="mt-4 text-lg leading-8 text-neutral-600">
+            Earthworks and civil construction alongside domestic and commercial
+            plumbing and gas — delivered with precision, safety and local know-how.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => (
+            <article
+              key={service.slug}
+              className="group overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-neutral-900">
+                  {service.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-neutral-600">
+                  {service.summary}
+                </p>
+              </div>
+            </article>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Fleet */}
+      <section className="bg-neutral-50 py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 className="text-3xl font-bold tracking-tight text-neutral-900">
+            Our fleet
+          </h2>
+          <p className="mt-4 max-w-2xl text-lg leading-8 text-neutral-600">
+            Modern, well-maintained machinery for jobs of every size across the
+            Riverina.
+          </p>
+          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {fleet.map((item) => (
+              <li
+                key={item}
+                className="rounded-xl border border-neutral-200 bg-white px-5 py-6 text-center text-sm font-medium text-neutral-800"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-amber-500">
+        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-4 py-16 sm:flex-row sm:items-center sm:px-6">
+          <div>
+            <h2 className="text-2xl font-bold tracking-tight text-neutral-950 sm:text-3xl">
+              Planning a project? Let&apos;s talk.
+            </h2>
+            <p className="mt-2 text-neutral-900">
+              Free quotes across Wagga Wagga and the Riverina. No job too big or
+              small.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href={`tel:${site.phone.replace(/\s/g, "")}`}
+              className="rounded-full bg-neutral-950 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-neutral-800"
+            >
+              Call {site.phone}
+            </a>
+            <a
+              href={`mailto:${site.email}`}
+              className="rounded-full border border-neutral-950/30 px-6 py-3 text-base font-semibold text-neutral-950 transition-colors hover:bg-white/30"
+            >
+              Email us
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
