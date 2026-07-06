@@ -12,11 +12,17 @@ export const site = {
   description:
     "Wagga Civil and Earthworks delivers civil construction, detailed excavation, bulk earthworks, road construction, plumbing and gas across Wagga Wagga and the Riverina. Over a decade of local experience, one trusted team.",
 
-  // TODO: confirm the merged business contact details
-  phone: "0428 148 726", // placeholder (Prospec) — confirm merged number
-  email: "admin@prospecearthworks.com.au", // placeholder — confirm merged inbox
+  domain: "waggacivil.com.au",
+  email: "admin@waggacivil.com.au",
+
+  // Two named contacts for the merged business.
+  contacts: [
+    { name: "Ethan", phone: "0423 655 537" },
+    { name: "Angus", phone: "0428 148 726" },
+  ],
+
   address: {
-    street: "21 Matilda Crescent", // placeholder (Prospec) — confirm
+    street: "21 Matilda Crescent",
     suburb: "Gumly Gumly",
     city: "Wagga Wagga",
     state: "NSW",
@@ -64,7 +70,7 @@ export const services: Service[] = [
     summary:
       "Large-scale earthmoving, land reshaping and material relocation to prepare sites for construction. Efficient cut, fill and compaction for roadworks, subdivisions and industrial projects.",
     image: "/images/service-bulk-earthworks.jpg",
-    keywords: ["bulk earthworks wagga", "earthmoving riverina"],
+    keywords: ["earthworks wagga wagga", "earthmoving wagga wagga", "bulk earthworks", "earthmovers wagga"],
   },
   {
     slug: "road-construction",

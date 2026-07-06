@@ -16,11 +16,13 @@ export function SiteFooter() {
             Get in touch
           </p>
           <ul className="mt-3 space-y-2 text-sm">
-            <li>
-              <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="hover:text-white">
-                {site.phone}
-              </a>
-            </li>
+            {site.contacts.map((c) => (
+              <li key={c.phone}>
+                <a href={`tel:${c.phone.replace(/\s/g, "")}`} className="hover:text-white">
+                  {c.name} — {c.phone}
+                </a>
+              </li>
+            ))}
             <li>
               <a href={`mailto:${site.email}`} className="hover:text-white">
                 {site.email}

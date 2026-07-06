@@ -33,10 +33,10 @@ export function SiteHeader() {
         </nav>
 
         <a
-          href={`tel:${site.phone.replace(/\s/g, "")}`}
+          href="/#contact"
           className="rounded-full bg-amber-500 px-4 py-2 text-sm font-semibold text-neutral-950 transition-colors hover:bg-amber-400"
         >
-          {site.phone}
+          Get a quote
         </a>
       </div>
     </header>

@@ -29,10 +29,10 @@ export default function Home() {
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <a
-              href={`tel:${site.phone.replace(/\s/g, "")}`}
+              href="#contact"
               className="rounded-full bg-amber-500 px-6 py-3 text-base font-semibold text-neutral-950 transition-colors hover:bg-amber-400"
             >
-              Call {site.phone}
+              Get a free quote
             </a>
             <a
               href="#services"
@@ -119,13 +119,16 @@ export default function Home() {
               small.
             </p>
           </div>
-          <div className="flex flex-wrap gap-4">
-            <a
-              href={`tel:${site.phone.replace(/\s/g, "")}`}
-              className="rounded-full bg-neutral-950 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-neutral-800"
-            >
-              Call {site.phone}
-            </a>
+          <div className="flex flex-wrap gap-3">
+            {site.contacts.map((c) => (
+              <a
+                key={c.phone}
+                href={`tel:${c.phone.replace(/\s/g, "")}`}
+                className="rounded-full bg-neutral-950 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-neutral-800"
+              >
+                {c.name} · {c.phone}
+              </a>
+            ))}
             <a
               href={`mailto:${site.email}`}
               className="rounded-full border border-neutral-950/30 px-6 py-3 text-base font-semibold text-neutral-950 transition-colors hover:bg-white/30"
