@@ -32,9 +32,7 @@ export default function ServicesHub() {
           </div>
           <h1>Everything from the first cut to the final connection.</h1>
           <p className="intro">
-            {site.shortName} covers the full civil and earthworks scope across the
-            Riverina, plus the plumbing and gas side from Joll&apos;s. One team, one
-            point of contact, from site clearing to certified pads and drainage.
+            {`${site.shortName} covers the full civil and earthworks scope across the Riverina, plus the plumbing and gas side from Joll's. One team, one point of contact, from site clearing to certified pads and drainage.`}
           </p>
         </div>
       </section>

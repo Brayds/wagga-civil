@@ -99,7 +99,8 @@ a { color: inherit; text-decoration: none; }
   display: inline-flex; gap: 8px; align-items: center; border: 1px solid var(--ink); cursor: pointer;
 }
 .callbtn:hover { background: var(--hivis); border-color: var(--hivis); color: var(--ink-deep); }
-.menutoggle { display: none; background: none; }
+.menutoggle { display: none; background: none; color: var(--pen); border-color: var(--pen); font-size: 1.15rem; padding: 8px 13px; }
+.menutoggle:hover { background: var(--pen); border-color: var(--pen); color: var(--paper-tint); }
 
 /* mobile drawer */
 .drawer { display: none; }
@@ -260,12 +261,9 @@ figure.rec .cap b { color: var(--ink); font-weight: 600; }
 .measure { max-width: 62ch; }
 .measure p { font-size: 1.08rem; margin: 0 0 22px; }
 
-/* ---------- reveal (fail-safe: hidden only once JS marks the doc ready) ---------- */
-.reveal-ready .rv { opacity: 0; transform: translateY(16px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal-ready .rv.in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) {
-  .reveal-ready .rv { opacity: 1; transform: none; transition: none; }
-}
+/* Content renders instantly. (An earlier scroll-reveal could leave sections
+   blank until the observer fired, so it was removed. The .rv classes remain in
+   markup as harmless hooks in case a subtle entrance is reintroduced later.) */
 
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {

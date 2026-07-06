@@ -5,7 +5,6 @@ import { site } from "@/content/site";
 import { SITE_URL, localBusinessJsonLd, websiteJsonLd } from "@/lib/seo";
 import { SiteHeader } from "./components/SiteHeader";
 import { SiteFooter } from "./components/SiteFooter";
-import { Reveal } from "./components/Reveal";
 import { JsonLd } from "./components/JsonLd";
 
 export const metadata: Metadata = {
@@ -45,7 +44,6 @@ export default function RootLayout({
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
-        <Reveal />
       </body>
     </html>
   );
