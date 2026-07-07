@@ -6,6 +6,7 @@ import { SITE_URL, localBusinessJsonLd, websiteJsonLd } from "@/lib/seo";
 import { SiteHeader } from "./components/SiteHeader";
 import { SiteFooter } from "./components/SiteFooter";
 import { JsonLd } from "./components/JsonLd";
+import { Analytics } from "./components/Analytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -49,6 +50,7 @@ export default function RootLayout({
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   );
