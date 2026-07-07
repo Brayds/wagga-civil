@@ -9,7 +9,7 @@ import { JsonLd } from "../components/JsonLd";
 export const metadata: Metadata = pageMetadata({
   title: "About | Local Civil & Earthworks, Wagga Wagga",
   description:
-    "Wagga Civil and Earthworks is the merger of Joll's Plumbing and Prospec Earthworks — two trusted Riverina names, one local crew, over a decade on the ground in Wagga Wagga.",
+    "Wagga Civil and Earthworks is the merger of Joll's Plumbing & Excavation and Prospec Earthworks — two trusted Riverina names, one local crew, over a decade on the ground in Wagga Wagga.",
   path: "/about",
 });
 
@@ -33,8 +33,8 @@ export default function AboutPage() {
           <h1>Two Riverina names you already know, now one crew.</h1>
           <p className="intro">
             Wagga Civil and Earthworks is the merger of {site.heritage[0]} and{" "}
-            {site.heritage[1]} — the earthmoving and the wet trades under one roof,
-            run by the same people the region has trusted for years.
+            {site.heritage[1]} — two trusted local names under one roof, run by the
+            same people the region has trusted for years.
           </p>
         </div>
       </section>
@@ -45,29 +45,45 @@ export default function AboutPage() {
         <div className="wrap svc-body">
           <div className="prose">
             <p>
-              For more than a decade, Prospec Earthworks shaped Riverina ground and
-              Joll&apos;s Plumbing kept the water and gas running. Bringing them
-              together means one call for the whole job: clear the block, move the
-              dirt, cut the trenches, lay the drainage and connect it — without
-              juggling separate contractors who blame each other when something
-              doesn&apos;t line up.
+              Wagga Civil &amp; Earthworks brings together the experience and
+              reputation of two locally owned businesses, Prospec Earthworks and
+              Joll&apos;s Plumbing &amp; Excavation. By combining our people,
+              equipment and expertise, we&apos;ve created a business capable of
+              delivering complete earthmoving and civil construction solutions
+              across the Riverina.
             </p>
             <p>
-              We&apos;re local, and it matters. We know how a Wagga block drains,
-              how the red clay behaves wet and dry, and what the council wants to
-              see. That knowledge is the difference between a pad that certifies
-              first go and one that gets sent back.
+              From residential site cuts and rural earthworks to commercial
+              developments, subdivisions and large scale civil projects, we have
+              the experience, equipment and capability to deliver every project
+              safely, efficiently and to the highest standard.
             </p>
             <p>
-              Our excavators run Trimble GPS machine control, so levels and grades
-              come in on spec instead of being chased by hand. The fleet is owned
-              and operated in-house, not dry-hired, so we control the quality of
-              the work from the first cut to the last pass of the roller.
+              As a locally owned and operated business, we understand the
+              Riverina&apos;s unique conditions. We know how local soils behave,
+              how sites drain and what councils expect. That local knowledge helps
+              us plan smarter, work more efficiently and deliver quality results
+              from the ground up.
             </p>
             <p>
-              Big enough to take on subdivision civil works and commercial pads.
-              Small enough that the person who quotes the job is the one running the
-              machine, and the phone gets answered.
+              Our modern fleet includes excavators, bulldozers, graders, skid-steer
+              loaders, rollers, trucks and water carts, with Trimble GPS machine
+              control technology delivering accurate levels, precise grading and
+              efficient earthworks. Our entire fleet is owned and operated in-house,
+              not dry-hired, giving us complete control over quality, scheduling and
+              workmanship from the first cut to the final trim.
+            </p>
+            <p>
+              Whether it&apos;s bulk earthworks, site preparation, road
+              construction, drainage, subdivisions, commercial developments or
+              rural projects, our experienced operators take pride in delivering
+              work that&apos;s built to last.
+            </p>
+            <p>
+              Big enough to deliver subdivision civil works, commercial developments
+              and large scale earthworks. Small enough that the person who quotes
+              your job is the one overseeing it, and when you call, the phone gets
+              answered.
             </p>
           </div>
           <aside className="scope">
@@ -76,8 +92,8 @@ export default function AboutPage() {
               <li>Merger of {site.heritage.join(" + ")}</li>
               <li>10+ years local to the Riverina</li>
               <li>Owned fleet, GPS machine control</li>
-              <li>Civil, earthworks, drainage, plumbing &amp; gas</li>
-              <li>Based at {site.address.suburb}, Wagga Wagga</li>
+              <li>Civil, earthworks, drainage &amp; road construction</li>
+              <li>Based in Wagga Wagga</li>
             </ul>
             <Link className="btn primary" href="/services" style={{ width: "100%", justifyContent: "center" }}>
               See the services →
@@ -121,7 +137,7 @@ export default function AboutPage() {
             </div>
             <figcaption className="cap mono" style={{ display: "flex", justifyContent: "space-between", padding: "10px 2px 0" }}>
               <b>14t Kobelco</b>
-              <span>Gumly Gumly yard</span>
+              <span>Wagga Wagga yard</span>
             </figcaption>
           </figure>
         </div>

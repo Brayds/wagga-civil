@@ -7,9 +7,9 @@ import { GroundLine } from "../components/GroundLine";
 import { JsonLd } from "../components/JsonLd";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Services | Civil, Earthworks, Drainage, Plumbing & Gas",
+  title: "Services | Civil, Earthworks, Drainage & Road Construction",
   description:
-    "Civil and earthworks services across Wagga Wagga and the Riverina: detailed excavation, bulk earthworks, road construction, trenching, dam construction, site clearing, plumbing and gas.",
+    "Civil and earthworks services across Wagga Wagga and the Riverina: detailed excavation, bulk earthworks, road construction, trenching, dam construction and site clearing.",
   path: "/services",
 });
 
@@ -32,7 +32,7 @@ export default function ServicesHub() {
           </div>
           <h1>Everything from the first cut to the final connection.</h1>
           <p className="intro">
-            {`${site.shortName} covers the full civil and earthworks scope across the Riverina, plus the plumbing and gas side from Joll's. One team, one point of contact, from site clearing to certified pads and drainage.`}
+            {`${site.shortName} covers the full civil and earthworks scope across the Riverina. One team, one point of contact, from site clearing to certified pads and drainage.`}
           </p>
         </div>
       </section>

@@ -6,7 +6,7 @@ import { GroundLine } from "./components/GroundLine";
 
 export const metadata: Metadata = {
   title: {
-    absolute: `${site.name} | Civil, Earthworks & Plumbing, Wagga Wagga`,
+    absolute: `${site.name} | Civil, Earthworks & Drainage, Wagga Wagga`,
   },
   description: site.description,
   alternates: { canonical: "/" },
@@ -18,7 +18,7 @@ const work = [
   { src: "/images/work/drainage-headwall.jpg", col: "c6", ar: "ar43", t: "Stormwater & headwall", loc: "Wagga Wagga" },
   { src: "/images/work/machine-kobelco.jpg", col: "c4", ar: "ar45", t: "14t Kobelco", loc: "Site prep" },
   { src: "/images/work/survey-trimble.jpg", col: "c4", ar: "ar45", t: "GPS set-out", loc: "Trimble" },
-  { src: "/images/work/retaining-wall.jpg", col: "c4", ar: "ar45", t: "Rock retaining wall", loc: "Gumly Gumly" },
+  { src: "/images/work/retaining-wall.jpg", col: "c4", ar: "ar45", t: "Rock retaining wall", loc: "Wagga Wagga" },
   { src: "/images/work/bulk-pad.jpg", col: "c6", ar: "ar43", t: "Bulk earthworks pad", loc: "Junee" },
   { src: "/images/work/road-base.jpg", col: "c6", ar: "ar43", t: "Road base & access", loc: "Coolamon" },
 ];
@@ -38,9 +38,9 @@ export default function Home() {
               <span className="l2">Small enough to care.</span>
             </h1>
             <p className="lead rv">
-              Civil construction, bulk earthworks, drainage, roads, plumbing and
-              gas across Wagga Wagga and the Riverina. Two trusted local trades,
-              now one team on the ground.
+              Two trusted local trades, now one team on the ground. Civil
+              construction, bulk earthworks, drainage and roads across Wagga
+              Wagga and the Riverina.
             </p>
             <div className="cta-row rv">
               <a className="btn primary" href="#contact">
@@ -76,6 +76,26 @@ export default function Home() {
         </div>
       </div>
 
+      {/* WHY */}
+      <section className="band-ink why" id="about-teaser">
+        <div className="wrap rv">
+          <div className="k mono">Why Wagga Civil</div>
+          <h2>The gear of a big civil outfit. The number that actually answers.</h2>
+          <div className="why-cols">
+            {differentiators.map((d, i) => (
+              <div key={d.key}>
+                <div className="n">
+                  {String(i + 1).padStart(2, "0")} / {d.label}
+                </div>
+                <h3>{d.title}</h3>
+                <p>{d.body}</p>
+              </div>
+            ))}
+          </div>
+          <GroundLine />
+        </div>
+      </section>
+
       {/* SERVICES INDEX */}
       <section className="sec-pad" id="services">
         <div className="wrap">
@@ -85,7 +105,7 @@ export default function Home() {
               <h2>From a single house pad to full subdivision civil works.</h2>
             </div>
             <p>
-              Earthworks, drainage and the wet trades, run by the people actually
+              Civil, earthworks and drainage, run by the people actually
               operating the machines. One team, start to finish.
             </p>
           </div>
@@ -135,26 +155,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY */}
-      <section className="band-ink why" id="about-teaser">
-        <div className="wrap rv">
-          <div className="k mono">Why Wagga Civil</div>
-          <h2>The gear of a big civil outfit. The number that actually answers.</h2>
-          <div className="why-cols">
-            {differentiators.map((d, i) => (
-              <div key={d.key}>
-                <div className="n">
-                  {String(i + 1).padStart(2, "0")} / {d.label}
-                </div>
-                <h3>{d.title}</h3>
-                <p>{d.body}</p>
-              </div>
-            ))}
-          </div>
-          <GroundLine />
-        </div>
-      </section>
-
       {/* FLEET */}
       <section className="sec-pad" id="fleet">
         <div className="wrap">
@@ -188,7 +188,7 @@ export default function Home() {
               Across Wagga Wagga and the wider Riverina.
             </h2>
             <p style={{ color: "var(--stone)", maxWidth: "38ch" }}>
-              Based at Gumly Gumly, on the ground from Griffith to Tumut. If
+              Based in Wagga Wagga, on the ground from Griffith to Tumut. If
               you&apos;re in the region, we can get to you.
             </p>
           </div>
@@ -219,8 +219,7 @@ export default function Home() {
           <div className="cmeta">
             <a href={`mailto:${site.email}`}>✉ {site.email}</a>
             <span>
-              ◈ {site.address.street}, {site.address.suburb} {site.address.state}{" "}
-              {site.address.postcode}
+              ◈ {site.address.city} {site.address.state} {site.address.postcode}
             </span>
             <span>{site.hours} · Riverina wide</span>
           </div>

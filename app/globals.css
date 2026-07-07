@@ -84,11 +84,9 @@ a { color: inherit; text-decoration: none; }
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--pen-line);
 }
-.bar { display: flex; align-items: center; justify-content: space-between; height: 70px; }
-.brand { display: flex; align-items: center; gap: 12px; }
-.brand .mark { width: 38px; height: 38px; flex: none; }
-.brand .name { font-family: var(--font-archivo); font-stretch: 125%; font-weight: 800; font-size: 0.95rem; letter-spacing: 0.01em; line-height: 1; display: block; }
-.brand .sub { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.22em; color: var(--stone); text-transform: uppercase; }
+.bar { display: flex; align-items: center; justify-content: space-between; height: 78px; }
+.brand { display: flex; align-items: center; }
+.brand-logo { height: 52px; width: auto; display: block; }
 .nav { display: flex; gap: 30px; align-items: center; }
 .nav a { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink); padding: 6px 0; position: relative; }
 .nav a::after { content: ""; position: absolute; left: 0; bottom: -2px; height: 2px; width: 0; background: var(--hivis); transition: width 0.22s ease; }
@@ -286,11 +284,13 @@ figure.rec .cap b { color: var(--ink); font-weight: 600; }
   .site-footer .cols { grid-template-columns: 1fr; gap: 26px; }
   .sec-pad { padding: 60px 0; }
   /* mobile drawer */
-  .drawer.open { display: block; position: fixed; inset: 70px 0 0; z-index: 39; background: var(--paper); padding: 30px 28px; }
+  .brand-logo { height: 44px; }
+  .drawer.open { display: block; position: fixed; inset: 78px 0 0; z-index: 39; background: var(--paper); padding: 30px 28px; }
   .drawer.open a { display: block; font-family: var(--font-archivo); font-stretch: 125%; font-weight: 700; font-size: 1.8rem; padding: 16px 0; border-bottom: 1px solid var(--pen-line); }
 }
 
 @media (max-width: 560px) {
+  .brand-logo { height: 38px; }
   .related-grid { grid-template-columns: 1fr; }
   .trust .wrap { justify-content: flex-start; }
   .hero-art figcaption { display: none; }

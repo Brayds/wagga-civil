@@ -33,8 +33,7 @@ export function pageMetadata(opts: {
 
 const fullAddress = {
   "@type": "PostalAddress",
-  streetAddress: site.address.street,
-  addressLocality: site.address.suburb,
+  addressLocality: site.address.city,
   addressRegion: site.address.state,
   postalCode: site.address.postcode,
   addressCountry: site.address.country,

@@ -3,15 +3,15 @@
 // file to change first.
 //
 // Business facts below are the confirmed merged Wagga Civil and Earthworks
-// details (Joll's Plumbing + Prospec Earthworks). If a licence/insurance line is
+// details (Joll's Plumbing & Excavation + Prospec Earthworks). If a licence/insurance line is
 // ever added to the footer, confirm the exact numbers with the client first.
 
 export const site = {
   name: "Wagga Civil and Earthworks",
   shortName: "Wagga Civil",
-  tagline: "Civil, earthworks, plumbing and gas across the Riverina",
+  tagline: "Civil construction and earthworks across the Riverina",
   description:
-    "Wagga Civil and Earthworks delivers civil construction, detailed excavation, bulk earthworks, road construction, drainage, plumbing and gas across Wagga Wagga and the Riverina. Over a decade of local experience, one trusted team.",
+    "Wagga Civil and Earthworks delivers civil construction, detailed excavation, bulk earthworks, road construction and drainage across Wagga Wagga and the Riverina. Over a decade of local experience, one trusted team.",
 
   domain: "waggacivil.com.au",
   url: "https://waggacivil.com.au",
@@ -23,16 +23,17 @@ export const site = {
     { name: "Angus", phone: "0428 148 726", tel: "+61428148726" },
   ],
 
+  // Client asked to show the location as just "Wagga Wagga" — no street
+  // address, no Gumly Gumly suburb. Kept city/state/postcode for the LocalBusiness
+  // schema (postcode 2650 = Wagga Wagga).
   address: {
-    street: "21 Matilda Crescent",
-    suburb: "Gumly Gumly",
     city: "Wagga Wagga",
     state: "NSW",
-    postcode: "2652",
+    postcode: "2650",
     country: "AU",
   },
 
-  // Approx geo for the Gumly Gumly / Wagga Wagga base (LocalBusiness schema).
+  // Approx geo for the Wagga Wagga base (LocalBusiness schema).
   geo: { lat: -35.1236, lng: 147.4211 },
 
   hours: "Mon–Sat",
@@ -49,7 +50,7 @@ export const site = {
   ],
 
   // The heritage the brand is built on — two names the region already trusts.
-  heritage: ["Joll's Plumbing", "Prospec Earthworks"],
+  heritage: ["Joll's Plumbing & Excavation", "Prospec Earthworks"],
 
   social: {
     // TODO: confirm which socials carry over to the merged brand
@@ -70,7 +71,7 @@ export const differentiators = [
     label: "Trusted",
     title: "Two names you already know",
     body:
-      "Joll's Plumbing and Prospec Earthworks, merged into one crew. The same operators the region has used for years, now under one roof.",
+      "Joll's Plumbing & Excavation and Prospec Earthworks, merged into one crew. The same operators the region has used for years, now under one roof.",
   },
   {
     key: "precise",
@@ -103,7 +104,7 @@ export type Service = {
   related: string[];
 };
 
-// Merged service list: Prospec's civil/earthworks services + Joll's plumbing & gas.
+// Civil and earthworks service list (from Prospec Earthworks).
 export const services: Service[] = [
   {
     slug: "detailed-excavation",
@@ -202,7 +203,7 @@ export const services: Service[] = [
       "Trenching for every underground service, dug to the right depth and width, then backfilled and compacted properly.",
     body: [
       "Whether it's water, sewer, stormwater, power or comms, the trench has to be the right depth, the right width and dug without hitting what's already in the ground. We locate and work around existing services, keep the trench safe, and bed, backfill and compact so nothing settles later.",
-      "Because the same business does the earthworks and the plumbing, trenching is coordinated with the trades that follow — the pipe layer or electrician isn't left waiting or re-digging. We can dig, lay and reinstate, or just cut clean trenches for your contractor.",
+      "Because we run the earthworks in-house, trenching is coordinated with the trades that follow — the pipe layer or electrician isn't left waiting or re-digging. We cut clean, accurate trenches ready for your contractor, then backfill and reinstate.",
       "Small residential runs to long civil service trenches, we've got the right machine for the width and the ground.",
     ],
     includes: [
@@ -212,7 +213,7 @@ export const services: Service[] = [
       "Pipe and conduit bedding",
       "Backfill, compaction and reinstatement",
     ],
-    related: ["plumbing-and-gas", "detailed-excavation", "road-construction"],
+    related: ["detailed-excavation", "road-construction", "site-clearing"],
   },
   {
     slug: "dam-construction",
@@ -267,33 +268,6 @@ export const services: Service[] = [
       "Straight into topsoil strip and site prep",
     ],
     related: ["bulk-earthworks", "detailed-excavation", "dam-construction"],
-  },
-  {
-    slug: "plumbing-and-gas",
-    title: "Plumbing & Gas",
-    summary:
-      "Domestic and commercial plumbing and gas — drainage, hot water, gas fitting, repairs and new installs.",
-    image: "/images/work/drainage-pit.jpg",
-    heroImage: "/images/work/drainage-pit.jpg",
-    keywords: ["plumber wagga wagga", "gas fitting riverina", "plumbing wagga wagga"],
-    metaTitle: "Plumber Wagga Wagga | Plumbing & Gas — Wagga Civil",
-    metaDescription:
-      "Plumbing and gas in Wagga Wagga and the Riverina — drainage, hot water, gas fitting, blocked drains, repairs and new installs for homes and businesses. The plumbing side of Wagga Civil and Earthworks. Get a quote.",
-    intro:
-      "The wet trades, backed by the earthworks crew — plumbing and gas for homes and businesses across the Riverina.",
-    body: [
-      "Wagga Civil's plumbing and gas side comes straight out of Joll's Plumbing, so it's a proper plumbing business, not an add-on. Drainage, hot water systems, gas fitting, blocked drains, repairs, maintenance and new installs for both homes and commercial sites.",
-      "Where it gets useful is the combination: the same business can dig the trench, lay the drainage and connect it, or handle the stormwater and civil drainage on a build without juggling separate contractors. On bigger jobs that coordination saves real time.",
-      "Straightforward, safe workmanship and a number that answers — the same standard the region already knows.",
-    ],
-    includes: [
-      "Drainage, stormwater and sewer",
-      "Hot water systems supply and install",
-      "Gas fitting and appliance connection",
-      "Blocked drains and repairs",
-      "Domestic and commercial maintenance",
-    ],
-    related: ["trenching", "detailed-excavation", "road-construction"],
   },
 ];
 

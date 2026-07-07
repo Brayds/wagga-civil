@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { site } from "@/content/site";
-import { LogoMark } from "./Logo";
 
 const NAV = [
   { href: "/services", label: "Services" },
@@ -21,11 +21,14 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="wrap bar">
         <Link href="/" className="brand" aria-label={`${site.name} home`}>
-          <LogoMark />
-          <span>
-            <span className="name">WAGGA CIVIL</span>
-            <span className="sub">&amp; Earthworks</span>
-          </span>
+          <Image
+            src="/images/logo-wagga-civil.png"
+            alt={site.name}
+            width={1479}
+            height={450}
+            priority
+            className="brand-logo"
+          />
         </Link>
 
         <nav className="nav">

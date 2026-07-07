@@ -10,7 +10,7 @@ import { JsonLd } from "./components/JsonLd";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${site.name} | Civil, Earthworks & Plumbing, Wagga Wagga`,
+    default: `${site.name} | Civil, Earthworks & Drainage, Wagga Wagga`,
     template: `%s | ${site.shortName}`,
   },
   description: site.description,
