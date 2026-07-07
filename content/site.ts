@@ -14,7 +14,10 @@ export const site = {
     "Wagga Civil and Earthworks delivers civil construction, detailed excavation, bulk earthworks, road construction and drainage across Wagga Wagga and the Riverina. Over a decade of local experience, one trusted team.",
 
   domain: "waggacivil.com.au",
-  url: "https://waggacivil.com.au",
+  // TEMPORARY: canonical + OG/social URLs point at the live Vercel deployment
+  // while the custom domain waggacivil.com.au isn't connected to Vercel yet.
+  // When the domain is live, switch this back to "https://waggacivil.com.au".
+  url: "https://wagga-civil.vercel.app",
   email: "admin@waggacivil.com.au",
 
   // Two named contacts for the merged business.
