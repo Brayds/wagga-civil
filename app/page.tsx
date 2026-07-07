@@ -29,6 +29,19 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="hero">
+        <video
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/hero-poster.jpg"
+          aria-hidden="true"
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-scrim" aria-hidden="true" />
+
         <div className="wrap hero-grid">
           <div>
             <div className="eyebrow mono rv">Wagga Wagga · The Riverina</div>
@@ -51,30 +64,19 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <figure className="hero-art rv">
-            <Image
-              src="/images/hero-sketch.jpg"
-              alt="Ink sketch of a Kobelco excavator on a Riverina worksite"
-              width={1800}
-              height={1800}
-              priority
-              sizes="(max-width: 900px) 100vw, 46vw"
-            />
-            <figcaption className="mono">Kobelco SK85 · in the field</figcaption>
-          </figure>
         </div>
         <GroundLine />
-      </section>
 
-      {/* TRUST */}
-      <div className="trust">
-        <div className="wrap">
-          <span className="mono">Est. in Riverina dirt</span>
-          <span className="mono">10+ years on the ground</span>
-          <span className="mono">GPS machine control</span>
-          <span className="mono">Joll&apos;s + Prospec, one crew</span>
+        {/* TRUST */}
+        <div className="trust">
+          <div className="wrap">
+            <span className="mono">Est. in Riverina dirt</span>
+            <span className="mono">10+ years on the ground</span>
+            <span className="mono">GPS machine control</span>
+            <span className="mono">Joll&apos;s + Prospec, one crew</span>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* WHY */}
       <section className="band-ink why" id="about-teaser">
