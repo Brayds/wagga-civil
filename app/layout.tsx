@@ -6,7 +6,6 @@ import { SITE_URL, localBusinessJsonLd, websiteJsonLd } from "@/lib/seo";
 import { SiteHeader } from "./components/SiteHeader";
 import { SiteFooter } from "./components/SiteFooter";
 import { JsonLd } from "./components/JsonLd";
-import { Analytics } from "./components/Analytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -45,12 +44,31 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${archivo.variable} ${plexMono.variable}`}
     >
+      <head>
+        {/* Google Analytics (gtag.js) — full snippet hardcoded in <head>.
+            Google Search Console's "Google Analytics" ownership verification
+            fetches the raw HTML (no JS) and needs BOTH the loader AND the
+            gtag('config') line literally in <head>. next/script and React
+            script-hoisting both leave the inline config in <body>, which fails
+            verification, so we render raw <script> tags directly in <head>. */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-Z73C61SZ33"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Z73C61SZ33');`,
+          }}
+        />
+      </head>
       <body>
         <JsonLd data={[localBusinessJsonLd(), websiteJsonLd()]} />
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
-        <Analytics />
       </body>
     </html>
   );
