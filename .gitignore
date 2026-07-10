@@ -43,3 +43,6 @@ next-env.d.ts
 # Raw scraped source sites (local reference only)
 /_source/
 .gstack/
+
+# Handover docs (Brayden's runbook + client PDFs — send the PDF, don't publish it)
+/handover/
