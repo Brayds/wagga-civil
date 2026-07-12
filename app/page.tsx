@@ -81,7 +81,7 @@ export default function Home() {
       {/* WHY */}
       <section className="band-ink why" id="about-teaser">
         <div className="wrap rv">
-          <div className="k mono">Why Wagga Civil</div>
+          <div className="k mono">Why Wagga Civil and Earthworks</div>
           <h2>The gear of a big civil outfit. The number that actually answers.</h2>
           <div className="why-cols">
             {differentiators.map((d, i) => (
