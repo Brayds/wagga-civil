@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const work = [
   { src: "/images/work/slab-formwork.jpg", col: "c6", ar: "ar43", t: "Commercial slab & civil", loc: "Riverina" },
   { src: "/images/work/drainage-headwall.jpg", col: "c6", ar: "ar43", t: "Stormwater & headwall", loc: "Wagga Wagga" },
-  { src: "/images/work/machine-kobelco.jpg", col: "c4", ar: "ar45", t: "14t Kobelco", loc: "Site prep" },
+  { src: "/images/work/machine-kobelco.jpg", col: "c4", ar: "ar45", t: "8t Kobelco", loc: "Site prep" },
   { src: "/images/work/survey-trimble.jpg", col: "c4", ar: "ar45", t: "GPS set-out", loc: "Trimble" },
   { src: "/images/work/retaining-wall.jpg", col: "c4", ar: "ar45", t: "Rock retaining wall", loc: "Wagga Wagga" },
   { src: "/images/work/bulk-pad.jpg", col: "c6", ar: "ar43", t: "Bulk earthworks pad", loc: "Junee" },

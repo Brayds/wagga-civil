@@ -20,7 +20,7 @@ export const site = {
   // Two named contacts for the merged business.
   contacts: [
     { name: "Ethan", phone: "0423 655 537", tel: "+61423655537" },
-    { name: "Angus", phone: "0412 345 678", tel: "+61412345678" },
+    { name: "Angus", phone: "0428 148 726", tel: "+61428148726" },
   ],
 
   // Client asked to show the location as just "Wagga Wagga" — no street
