@@ -8,7 +8,7 @@
 
 export const site = {
   name: "Wagga Civil and Earthworks",
-  shortName: "Wagga Civil",
+  shortName: "Wagga Civil and Earthworks",
   tagline: "Civil construction and earthworks across the Riverina",
   description:
     "Wagga Civil and Earthworks delivers civil construction, detailed excavation, bulk earthworks, road construction and drainage across Wagga Wagga and the Riverina. Over a decade of local experience, one trusted team.",
