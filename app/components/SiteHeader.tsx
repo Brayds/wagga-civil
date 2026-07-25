@@ -4,13 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { site } from "@/content/site";
+import { navLinks } from "@/content/pages";
 
-const NAV = [
-  { href: "/services", label: "Services" },
-  { href: "/#work", label: "Work" },
-  { href: "/about", label: "About" },
-  { href: "/#contact", label: "Contact" },
-];
+const NAV = navLinks();
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);

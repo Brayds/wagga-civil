@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { archivo, plexMono } from "./fonts";
 import { site } from "@/content/site";
+import { themeCss } from "@/content/theme";
 import { SITE_URL, localBusinessJsonLd, websiteJsonLd } from "@/lib/seo";
 import { SiteHeader } from "./components/SiteHeader";
 import { SiteFooter } from "./components/SiteFooter";
@@ -45,6 +46,12 @@ export default function RootLayout({
       className={`${archivo.variable} ${plexMono.variable}`}
     >
       <head>
+        {/* The palette, straight from content/theme.ts. Rendered here rather
+            than declared in globals.css so there is exactly one source of
+            truth for colour: the stylesheet only ever reads var(--…), and
+            app/manifest.ts reads the same object. */}
+        <style dangerouslySetInnerHTML={{ __html: themeCss() }} />
+
         {/* Google Analytics (gtag.js) — full snippet hardcoded in <head>.
             Google Search Console's "Google Analytics" ownership verification
             fetches the raw HTML (no JS) and needs BOTH the loader AND the

@@ -57,6 +57,17 @@ export const site = {
   },
 } as const;
 
+// The top menu, in order. Any page added to content/pages.ts with
+// showInNav: true is appended after these automatically — you only need to add
+// it here as well if you want it to sit in a particular spot.
+export type NavLink = { href: string; label: string };
+export const mainNav: NavLink[] = [
+  { href: "/services", label: "Services" },
+  { href: "/#work", label: "Work" },
+  { href: "/about", label: "About" },
+  { href: "/#contact", label: "Contact" },
+];
+
 // Three proof points used on the homepage "why" band.
 export const differentiators = [
   {
