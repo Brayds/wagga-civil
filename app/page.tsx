@@ -14,7 +14,8 @@ export const metadata: Metadata = {
 
 // Recent-work proof grid. Rows share an aspect ratio so they sit even.
 const work = [
-  { src: "/images/work/house-site-prep.jpg", col: "c12", ar: "ar169", t: "House site prep", loc: "Grader, dozer & excavator" },
+  { src: "/images/work/house-site-prep.jpg", col: "c6", ar: "ar169", t: "House site prep", loc: "Grader, dozer & excavator" },
+  { src: "/images/work/grain-bunker-prep.jpg", col: "c6", ar: "ar169", t: "Grain bunker prep", loc: "Grader & water truck" },
   { src: "/images/work/slab-formwork.jpg", col: "c6", ar: "ar43", t: "Commercial slab & civil", loc: "Riverina" },
   { src: "/images/work/drainage-headwall.jpg", col: "c6", ar: "ar43", t: "Stormwater & headwall", loc: "Wagga Wagga" },
   { src: "/images/work/machine-kobelco.jpg", col: "c4", ar: "ar45", t: "8t Kobelco", loc: "Site prep" },
