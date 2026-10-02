@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 
 // Recent-work proof grid. Rows share an aspect ratio so they sit even.
 const work = [
+  { src: "/images/work/house-site-prep.jpg", col: "c12", ar: "ar169", t: "House site prep", loc: "Grader, dozer & excavator" },
   { src: "/images/work/slab-formwork.jpg", col: "c6", ar: "ar43", t: "Commercial slab & civil", loc: "Riverina" },
   { src: "/images/work/drainage-headwall.jpg", col: "c6", ar: "ar43", t: "Stormwater & headwall", loc: "Wagga Wagga" },
   { src: "/images/work/machine-kobelco.jpg", col: "c4", ar: "ar45", t: "8t Kobelco", loc: "Site prep" },
@@ -140,7 +141,7 @@ export default function Home() {
                     src={w.src}
                     alt={`${w.t}, ${w.loc}`}
                     fill
-                    sizes={w.col === "c6" ? "(max-width: 900px) 100vw, 50vw" : "(max-width: 900px) 100vw, 33vw"}
+                    sizes={w.col === "c12" ? "100vw" : w.col === "c6" ? "(max-width: 900px) 100vw, 50vw" : "(max-width: 900px) 100vw, 33vw"}
                   />
                 </div>
                 <figcaption className="cap mono">

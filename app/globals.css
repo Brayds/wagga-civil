@@ -189,7 +189,7 @@ figure.rec .frame { position: relative; width: 100%; overflow: hidden; }
 figure.rec img { width: 100%; height: 100%; object-fit: cover; display: block; }
 figure.rec .cap { display: flex; justify-content: space-between; gap: 10px; padding: 10px 2px 9px; color: var(--stone); }
 figure.rec .cap b { color: var(--ink); font-weight: 600; }
-.c6 { grid-column: span 6; } .c4 { grid-column: span 4; } .c3 { grid-column: span 3; } .c8 { grid-column: span 8; }
+.c6 { grid-column: span 6; } .c4 { grid-column: span 4; } .c3 { grid-column: span 3; } .c8 { grid-column: span 8; } .c12 { grid-column: span 12; }
 .ar43 { aspect-ratio: 3 / 2; } .ar45 { aspect-ratio: 4 / 5; } .ar169 { aspect-ratio: 16 / 10; }
 
 /* why band */
