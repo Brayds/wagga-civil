@@ -111,7 +111,10 @@ export default async function ServicePage({
               ))}
             </ul>
             <a className="btn primary" href={`tel:${site.contacts[0].tel}`} style={{ width: "100%", justifyContent: "center" }}>
-              Call {site.contacts[0].name} →
+              Call {site.contacts[0].name} → {site.contacts[0].phone}
+            </a>
+            <a className="btn primary" href={`tel:${site.contacts[1].tel}`} style={{ width: "100%", justifyContent: "center", marginTop: 10 }}>
+              Call Gus → {site.contacts[1].phone}
             </a>
           </aside>
         </div>
