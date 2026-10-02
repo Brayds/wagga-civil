@@ -81,8 +81,8 @@ export default function Home() {
       {/* WHY */}
       <section className="band-ink why" id="about-teaser">
         <div className="wrap rv">
-          <div className="k mono">Why Wagga Civil and Earthworks</div>
-          <h2>Why Wagga Civil and Earthworks?</h2>
+          <div className="k mono">Wagga Civil and Earthworks</div>
+          <h2>Why choose us?</h2>
           <div className="why-cols">
             {differentiators.map((d, i) => (
               <div key={d.key}>
