@@ -162,8 +162,7 @@ export default function Home() {
               Across Wagga Wagga and the wider Riverina.
             </h2>
             <p style={{ color: "var(--stone)", maxWidth: "38ch" }}>
-              Based in Wagga Wagga, on the ground from Griffith to Tumut. If
-              you&apos;re in the region, we can get to you.
+              If you&apos;re in the region, we can get to you.
             </p>
           </div>
           <div className="chips">
