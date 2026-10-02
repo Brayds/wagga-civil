@@ -181,7 +181,7 @@ export default function Home() {
           <div className="k mono rv">Get a quote</div>
           <h2 className="rv">Tell us about the job. We&apos;ll come and look at it.</h2>
           <div className="contact-grid">
-            {[ethan, angus].map((c) => (
+            {[angus, ethan].map((c) => (
               <a key={c.tel} className="ccard rv" href={`tel:${c.tel}`}>
                 <span className="who">{c.name}</span>
                 <span className="ph">{c.phone}</span>

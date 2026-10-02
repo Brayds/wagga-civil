@@ -70,7 +70,7 @@ export default function ServicesHub() {
           <div className="k mono rv">Get a quote</div>
           <h2 className="rv">Not sure which one you need? Just tell us the job.</h2>
           <div className="contact-grid">
-            {site.contacts.map((c) => (
+            {[...site.contacts].reverse().map((c) => (
               <a key={c.tel} className="ccard rv" href={`tel:${c.tel}`}>
                 <span className="who">{c.name}</span>
                 <span className="ph">{c.phone}</span>

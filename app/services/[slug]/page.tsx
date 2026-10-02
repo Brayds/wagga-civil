@@ -152,7 +152,7 @@ export default async function ServicePage({
           <div className="k mono">Get a quote</div>
           <h2>Tell us about the job. We&apos;ll come and look at it.</h2>
           <div className="contact-grid">
-            {site.contacts.map((c) => (
+            {[...site.contacts].reverse().map((c) => (
               <a key={c.tel} className="ccard" href={`tel:${c.tel}`}>
                 <span className="who">{c.name}</span>
                 <span className="ph">{c.phone}</span>
