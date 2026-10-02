@@ -170,6 +170,7 @@ section { position: relative; z-index: 1; }
 .sec-head .k { color: var(--pen); margin-bottom: 14px; }
 .sec-head h2 { font-size: clamp(1.9rem, 3.6vw, 2.9rem); margin: 0; max-width: 20ch; }
 .sec-head p { margin: 0; max-width: 42ch; color: var(--stone); }
+.sec-head.wide h2 { max-width: none; }
 .k { color: var(--pen); }
 
 /* services index */

@@ -101,15 +101,11 @@ export default function Home() {
       {/* SERVICES INDEX */}
       <section className="sec-pad" id="services">
         <div className="wrap">
-          <div className="sec-head rv">
+          <div className="sec-head wide rv">
             <div>
               <div className="k mono">What we do</div>
               <h2>From a single house pad to full subdivision civil works.</h2>
             </div>
-            <p>
-              Civil, earthworks and drainage, run by the people actually
-              operating the machines. One team, start to finish.
-            </p>
           </div>
           <div className="svc rv">
             {services.map((s, i) => (
