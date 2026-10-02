@@ -87,9 +87,9 @@ export const differentiators = [
   {
     key: "precise",
     label: "Equipped",
-    title: "High-quality gear",
+    title: "High quality gear",
     body:
-      "Excavators from 3.5 to 14 tonne, plus a track loader, roller and water truck, with Trimble GPS machine control. Pads and grades come in on spec, first pass.",
+      "A range of sized trucks, skid-steer loaders, a roller, grader, bulldozer and water truck, plus 1.5 to 14 tonne excavators with GPS machine control.",
   },
 ] as const;
 
