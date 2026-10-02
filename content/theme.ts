@@ -23,7 +23,7 @@ export const theme = {
   ink: "#000000",
 
   /** The ballpoint blue — small labels, the hand-drawn ground line. */
-  pen: "#c44a00",
+  pen: "#ff7400",
 
   /** Safety orange — highlights, hover effects, the main call-to-action. */
   hivis: "#949494",
