@@ -202,6 +202,14 @@ figure.rec .cap b { color: var(--ink); font-weight: 600; }
 .why-cols h3 { font-family: var(--font-archivo); font-stretch: 125%; font-size: 1.25rem; margin: 0 0 10px; color: var(--on-dark-strong); }
 .why-cols p { margin: 0; color: var(--on-dark); font-size: 0.98rem; }
 .why .ground { color: var(--hivis); opacity: 0.5; margin-top: 56px; }
+/* light variant of the why band: beige ground, dark ink text */
+.band-paper { background: var(--band); color: var(--ink); }
+.band-paper .k { color: var(--pen); }
+.band-paper h2 { color: var(--ink); }
+.band-paper .why-cols .n { color: var(--pen); }
+.band-paper .why-cols h3 { color: var(--ink); }
+.band-paper .why-cols p { color: var(--lead); }
+.band-paper .ground { color: var(--pen); }
 
 /* fleet spec */
 .fleet-list { border-top: 2px solid var(--ink); }

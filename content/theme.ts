@@ -36,6 +36,9 @@ export const theme = {
   /** The darkest shade, used for the "Why us" band and the footer. */
   inkDeep: "#000000",
 
+  /** Beige background for the "Why choose us?" section on the home page. */
+  band: "#ede5d6",
+
   /** Off-white used for text sitting on top of the dark bands. */
   paperTint: "#f4eee2",
 
@@ -74,6 +77,7 @@ const CSS_VARS: Record<string, string> = {
   "--paper-2": theme.paperDeep,
   "--ink-deep": theme.inkDeep,
   "--paper-tint": theme.paperTint,
+  "--band": theme.band,
   "--stone": theme.stone,
   "--lead": theme.lead,
   "--on-dark-strong": theme.onDarkStrong,

@@ -79,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* WHY */}
-      <section className="band-ink why" id="about-teaser">
+      <section className="band-ink band-paper why" id="about-teaser">
         <div className="wrap rv">
           <div className="k mono">Wagga Civil and Earthworks</div>
           <h2>Why choose us?</h2>
