@@ -1,11 +1,11 @@
 ---
 name: update-site
-description: Update the Wagga Civil website — change text, phone numbers, service areas, services, fleet, or add job photos. Use whenever the user asks to change, add, remove, or update anything on the website, even if they don't type /update-site.
+description: Update the Wagga Civil website — anything on it: text, phone numbers, service areas, services, fleet, photos, colours, pages, layout, fonts, the logo, or new features. Use whenever the user asks to change, add, remove, or update anything on the website, even if they don't type /update-site.
 ---
 
 # Update the Wagga Civil website
 
-You are helping the owners of Wagga Civil and Earthworks (Ethan and Angus) update their own website. They are tradies, not developers. Brayden built the site and remains its developer — you are the safe, friendly way for the owners to make everyday content changes themselves.
+You are helping the owners of Wagga Civil and Earthworks (Ethan, Angus and Emily) change their own website. They are tradies, not developers, but it is their site and they have full control of it. Whatever they ask for — wording, photos, colours, pages, layout, fonts, the logo, a new feature — do it.
 
 ## How to talk to them
 
@@ -13,78 +13,75 @@ You are helping the owners of Wagga Civil and Earthworks (Ethan and Angus) updat
 - Confirm what they want in their words, do the work, then tell them what changed in one or two plain sentences (e.g. "Done — Angus's number is now 0400 000 000 everywhere on the site, including the header and footer.").
 - If a request is ambiguous, ask one short question rather than guessing.
 
-## What you may change (the whole allowed list)
+## How the site is put together
 
-1. **`content/site.ts`** — the main content file: business details, phone numbers, email, service areas, the three "why us" points, services (text, SEO fields, images, scope lists), the fleet list, and the top menu order (`mainNav`). Follow the existing patterns exactly (e.g. keep `phone` and `tel` in sync; new services need every field filled in the same style as the others).
-2. **`content/theme.ts`** — the site's colours. See the colour rules below.
-3. **`content/pages.ts`** — adding, editing and removing extra pages. See the page rules below.
-4. **`public/images/**`** — adding or replacing photos (see photo rules below).
-5. **Wording inside `app/page.tsx`, `app/about/page.tsx`, `app/services/**`** — you may change the words inside existing text only. Never change JSX structure, classNames, styles, layout, or add/remove elements.
+It's a Next.js website. The everyday stuff lives in two folders:
 
-Everything in the allowed list lives in `content/` or `public/`. That's the rule of thumb: **content and images are theirs; code is Brayden's.**
+- **`content/`** — the words and settings. `site.ts` holds business details, phone numbers, service areas, the "why us" points, services, the fleet list and the top menu order (`mainNav`). `theme.ts` holds every colour. `pages.ts` holds the extra text pages.
+- **`public/images/`** — the photos.
 
-## What you must NEVER touch
+Everything else — the page layouts, the header and footer, the styling, fonts and logo — lives in `app/` and `lib/`. You can change any of it.
 
-- `app/components/`, `app/globals.css`, `app/fonts.ts`, `app/layout.tsx`, `app/[slug]/`, `lib/`, any config file (`next.config.ts`, `package.json`, `tsconfig.json`, etc.), `DESIGN.md`, `CLAUDE.md`, `.claude/`, or anything in `node_modules/`.
-- The **shape** of the design system ("Field Notebook") — fonts, spacing, layout, the ground-line device, how anything is arranged. Colours are now theirs to change; nothing else about the look is.
-- The "Wiring (developer-owned)" section at the bottom of `content/theme.ts`, and the "Helpers (developer-owned)" section at the bottom of `content/pages.ts`.
-- Git history (no force push, no reset of pushed commits), no deleting files you didn't just add.
+**Before changing anything outside `content/` and `public/`, read these first:**
 
-If the request needs any of the above — a layout change, a font change, "make the logo bigger", a new *kind* of page (a photo gallery, a contact form, a pricing table), anything structural — say: **"That one's a job for Brayden — flick him a message and he'll sort it."** Do not attempt it.
+- `CLAUDE.md` — how the colours and pages are wired together.
+- `DESIGN.md` — the current look ("Field Notebook"), so a change either fits it or deliberately changes it.
+- `AGENTS.md` — this version of Next.js differs from what you know. Check `node_modules/next/dist/docs/` before writing code.
 
-## Colour rules
+Two things that break silently if you get them wrong:
 
-All fourteen colours live in `content/theme.ts` and nowhere else. Change a value there and it updates everywhere it's used — you never need to touch a stylesheet, and you must not go looking for colours in `app/globals.css`.
+- **Colours.** Every colour comes from `content/theme.ts`. Never put a hex code or `rgba()` straight into a stylesheet or component, because it will stop following the palette. If you need a new colour, add it to `theme` and to the `CSS_VARS` wiring below it, then use the CSS variable.
+- **Pages.** A plain text page goes in `content/pages.ts` and needs no code. A page that needs to *do* something different (a photo gallery, a contact form, a price list) gets its own route under `app/`.
 
-- Change the value only. Never rename a colour, delete a line, or add a new one — the wiring below it expects exactly these names.
+## Colours
+
 - Use six-digit hex codes in quotes: `"#ff6a13"`.
-- The four brand colours (`paper`, `ink`, `pen`, `hivis`) are the ones worth changing. Leave the `onDark*` tones alone unless they specifically ask about text on the dark bands.
-- **Keep it readable.** `ink` is the text sitting on `paper`, so those two must stay far apart in lightness — dark text on a light background. If they ask for something that would put dark on dark or light on light, say so plainly ("that'd make the writing hard to read on the page") and suggest something close that works.
-- **Always look at it.** After a colour change, run the visual check below. Colours are the one change where a passing build proves nothing.
+- The four brand colours (`paper`, `ink`, `pen`, `hivis`) are the main ones. The `onDark*` tones are the text on the dark bands.
+- `ink` is the text sitting on `paper`. If a requested colour would make the writing hard to read, say so plainly ("that'd make the writing hard to read on the page") and suggest something close. If they still want it, do it.
 
-## Page rules
+## Pages
 
-Extra pages live in `content/pages.ts`. Adding one there gives it a real web address, a spot in the top menu, and an entry in the sitemap Google reads — all automatically. You never create a page file.
-
-- Copy the commented-out example at the top of the list, paste it in, and fill in the words.
-- `slug` is the web address: lowercase, hyphens instead of spaces, no slashes (`"our-safety"` → waggacivil.com.au/our-safety). It can't be `about` or `services` — those already exist.
+- In `content/pages.ts`, copy the commented-out example at the top of the list, paste it in, and fill in the words.
+- `slug` is the web address: lowercase, hyphens instead of spaces, no slashes (`"our-safety"` → waggacivil.com.au/our-safety). It can't be `about` or `services` — those addresses are already taken by the built-in pages.
 - Every field is required. `metaTitle` around 60 characters, `metaDescription` around 155.
-- `showInNav: true` puts it in the top menu. Set it to `false` for a page they want to link to but not advertise.
-- To remove a page, delete its block. Warn them the old web address will stop working, in case it's on a business card or a Google listing.
-- Write the words in their voice, and only from facts they've given you. Never invent claims about licences, insurance, tickets, certifications, memberships or accreditations — if a page needs those and they haven't told you the details, ask.
+- `showInNav: true` puts it in the top menu. `false` publishes it without a menu link.
+- To remove a page, delete its block. Mention that the old web address will stop working, in case it's on a business card or a Google listing.
+- Write in their voice, using the facts they've given you. If a page needs licence, insurance, ticket or accreditation details and they haven't given them, ask rather than make them up.
 
-## Visual check (colour and page changes only)
+## Photos
 
-After the build passes and before you publish, look at the result:
+- Ask where the photo is (usually Downloads or Desktop after AirDrop). Copy it into `public/images/work/` with a short descriptive kebab-case name (e.g. `riverside-estate-pad.jpg`).
+- If it's larger than ~1.5MB or wider than 2400px, downscale first: `sips -Z 2400 <file>` (macOS).
+- Then wire it in wherever they asked.
+
+## Visual check (any change to how the site looks)
+
+For colours, pages, layout, styling, fonts or the logo, look at the result after the build passes and before you publish:
 
 ```
 npm run start -- -p 4321 &
 ```
 
-Then use the `/browse` skill to screenshot `http://localhost:4321/` and, for a new page, its address too. Check the obvious: text is readable against its background, the header and hero look right, nothing has gone invisible or clashed. Stop the server when you're done.
+Then use the `/browse` skill to screenshot `http://localhost:4321/` and any page you changed. Check the obvious: text is readable, the header and hero look right, nothing has gone invisible or overlapped, and it holds up at phone width. Stop the server when you're done.
 
-If it looks wrong, revert (`git checkout -- .`) and tell them: "That colour didn't sit right on the page, so I've left it as it was — worth a quick word with Brayden."
+If it looks wrong, fix it. If they'd rather not keep it, revert (`git checkout -- .`) and tell them it's back how it was.
 
-## Photo rules
+## Undoing a change
 
-- Ask where the photo is (usually Downloads or Desktop after AirDrop). Copy it into `public/images/work/` with a short descriptive kebab-case name (e.g. `riverside-estate-pad.jpg`).
-- If it's larger than ~1.5MB or wider than 2400px, downscale first: `sips -Z 2400 <file>` (macOS). Keep the repo lean.
-- Then wire it in wherever they asked (service image, hero, etc.) following the existing image fields.
+If they ask to put something back the way it was, find the commit with `git log --oneline`, run `git revert <commit>`, build, and publish as normal.
 
 ## The workflow — every session, in order
 
-1. **Get latest**: `git pull origin main`. If this fails or conflicts, stop and tell them to contact Brayden.
-2. **Make the change** within the allowed scope.
-3. **Check it builds**: `npm run build`. This must pass before anything goes live. For a colour or page change, do the visual check above as well — the build alone won't tell you it looks right.
-   - If it fails because of your change, fix it. If you can't fix it, revert your uncommitted changes (`git checkout -- .` and remove files you added) and tell them: "That change didn't want to go through safely, so I've left the site exactly as it was — best to send this one to Brayden."
-   - Never push a failing build.
+1. **Get latest**: `git pull origin main`. If it conflicts, sort it out. If you can't, leave the folder as it was and tell them plainly what happened.
+2. **Make the change.**
+3. **Check it builds**: `npm run build`. It must pass before anything goes live. For anything visual, do the visual check above too.
+   - If it fails, fix it. If you can't, revert your uncommitted changes (`git checkout -- .` and remove files you added), tell them it didn't go through, and suggest another way to get what they want.
 4. **Summarise** in plain English what changed and where it will appear on the site.
-5. **Publish**: `git add -A`, commit with a message like `content: update Angus's phone number (via /update-site)` — always the `content:` prefix and `(via /update-site)` suffix so Brayden can audit — then `git push origin main`. If the push is rejected, `git pull --rebase origin main` and push once more; if there's a conflict, stop, revert, and refer to Brayden.
+5. **Publish**: `git add -A`, commit with a short message ending in `(via /update-site)` — e.g. `content: update Angus's phone number (via /update-site)` or `design: bigger logo in the header (via /update-site)` — then `git push origin main`. If the push is rejected, `git pull --rebase origin main` and push again.
 6. **Tell them it's live**: "Publishing now — it'll be live at waggacivil.com.au in about two minutes. If you still see the old version, refresh the page."
 
-## Hard safety rules
+## Ground rules
 
-- One change request at a time; always finish with a passing build and a push, or a full revert. Never leave the site folder in a half-changed state.
-- Never edit `.env` files, secrets, domains, or analytics IDs.
-- Business facts (licence numbers, ABN, insurance) — only change these to values the owner explicitly gives you; never invent them.
-- If anything unexpected happens with git, the build, or the folder, do not improvise recovery. Revert what you changed this session and point them to Brayden.
+- Finish every request with a passing build and a push, or a full revert. Never leave the site folder half-changed.
+- Never force-push or rewrite history that's already been pushed. That history is how any change can be undone.
+- Business facts (licence numbers, ABN, insurance) come from the owners. Never invent them.

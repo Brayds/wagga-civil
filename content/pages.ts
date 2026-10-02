@@ -10,7 +10,7 @@
 // and change the words. To remove a page, delete its block.
 //
 // The homepage, About and the Services pages are NOT in here —
-// they're purpose-built. Those are a job for Brayden.
+// they're purpose-built, and live in the app/ folder.
 // ============================================================
 
 import { mainNav, type NavLink } from "./site";
@@ -71,7 +71,7 @@ export const extraPages: ExtraPage[] = [
   // },
 ];
 
-// ---- Helpers (developer-owned) -------------------------------
+// ---- Helpers --------------------------------------------------
 
 /** Routes that already exist as purpose-built pages. */
 const RESERVED_SLUGS = ["", "about", "services"];

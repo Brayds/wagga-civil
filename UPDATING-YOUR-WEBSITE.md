@@ -12,8 +12,10 @@ Your website has a built-in AI assistant that makes changes for you. You describ
 - Update the equipment/fleet list
 - **The site's colours** — the cream background, the navy text, the orange highlights
 - **Add a new page** — and it puts itself in the menu
+- **The look of the site** — fonts, spacing, layout, the logo
+- **New features** — a photo gallery, a contact form, a price list, whatever you need
 
-**What's a job for Brayden:** the fonts, the spacing and layout, the logo, a page that needs to *do* something (a contact form, a photo gallery, prices), or anything the assistant tells you to send his way. Just text him.
+In short: anything. If you can describe it, the assistant can have a go at it.
 
 ## How to make a change
 
@@ -33,16 +35,21 @@ Your website has a built-in AI assistant that makes changes for you. You describ
 
 > `/update-site` Add a Safety page: we do site inductions, daily pre-starts, and all our operators are ticketed
 
+> `/update-site` Make the logo in the top corner a bit bigger
+
+> `/update-site` Add a photo gallery page with all our job photos
+
 4. Answer any question it asks, then let it finish. It will tell you when the change is live.
 
 ## Good to know
 
 - **Photos:** AirDrop them from your phone to the computer first (they land in Downloads), then just tell the assistant where they are.
 - **Wait 2 minutes** after it says "publishing", then check waggacivil.com.au. Refresh the page if you still see the old version.
-- **You can't really break it.** Every change is checked before it goes live, and Brayden can wind anything back to exactly how it was.
+- **Every change is checked before it goes live**, and every change can be wound back to exactly how it was.
 - **Colours:** describe what you want in words ("warmer", "a deeper orange", "closer to navy") — you don't need colour codes. The assistant will show you the result before it publishes, and it'll push back if a colour would make the writing hard to read.
 - **New pages:** tell it what the page is called and what it should say. It writes only what you tell it — if it needs a licence number or an insurance detail it will ask, never guess.
-- **If anything looks wrong on the site**, don't try to fix it yourself — text Brayden and he'll sort it.
+- **If anything looks wrong on the site**, tell the assistant what's wrong and it'll fix it, or say "put it back how it was" and it'll undo the last change.
+- **Bigger changes** like a new layout or a new feature: describe what you want, look at what it shows you, and ask for tweaks until you're happy.
 
 ## One-time setup (done with Brayden — you don't need to remember this)
 

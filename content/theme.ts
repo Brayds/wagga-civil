@@ -61,10 +61,10 @@ export const theme = {
   onDarkFaint: "#8887a8",
 } as const;
 
-// ---- Wiring (developer-owned) --------------------------------
+// ---- Wiring ---------------------------------------------------
 // Maps the names above onto the CSS custom properties the
 // stylesheet uses. Adding a colour above does nothing until it is
-// wired up here, so leave this to Brayden.
+// also added here.
 
 const CSS_VARS: Record<string, string> = {
   "--paper": theme.paper,
