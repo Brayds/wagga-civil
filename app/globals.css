@@ -206,7 +206,7 @@ figure.rec .cap b { color: var(--ink); font-weight: 600; }
 .band-paper { background: var(--band); color: var(--ink); }
 .band-paper .k { color: var(--pen); }
 .band-paper h2 { color: var(--ink); }
-.band-paper .why-cols .n { color: var(--pen); }
+.band-paper .why-cols .n { color: var(--pen); font-weight: 600; }
 .band-paper .why-cols h3 { color: var(--ink); }
 .band-paper .why-cols p { color: var(--lead); }
 .band-paper .ground { color: var(--pen); }
