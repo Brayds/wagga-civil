@@ -129,10 +129,6 @@ export default function Home() {
               <div className="k mono">Recent work · field record</div>
               <h2>Real jobs, real ground.</h2>
             </div>
-            <p>
-              Stormwater, headwalls, road base, detailed set-out and machine-graded
-              pads for builders, developers and civil projects across the region.
-            </p>
           </div>
           <div className="work-grid">
             {work.map((w) => (
