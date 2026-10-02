@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { site, services, fleet, differentiators } from "@/content/site";
+import { site, services, differentiators } from "@/content/site";
 import { GroundLine } from "./components/GroundLine";
 
 export const metadata: Metadata = {
@@ -146,28 +146,6 @@ export default function Home() {
                   <span>{w.loc}</span>
                 </figcaption>
               </figure>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FLEET */}
-      <section className="sec-pad" id="fleet">
-        <div className="wrap">
-          <div className="sec-head rv">
-            <div>
-              <div className="k mono">Plant &amp; fleet</div>
-              <h2>What turns up on site.</h2>
-            </div>
-            <p>Owned and operated, not sub-hired. If the job needs more, we bring more.</p>
-          </div>
-          <div className="fleet-list rv">
-            {fleet.map((f, i) => (
-              <div key={f.name} className="row">
-                <span className="fi">{String(i + 1).padStart(2, "0")}</span>
-                <span className="fn">{f.name}</span>
-                <span className="fs">{f.note}</span>
-              </div>
             ))}
           </div>
         </div>

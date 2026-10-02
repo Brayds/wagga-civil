@@ -89,7 +89,7 @@ export const differentiators = [
     label: "Equipped",
     title: "High quality gear",
     body:
-      "A range of sized trucks, skid-steer loaders, a roller, grader, bulldozer and water truck, plus 1.5 to 14 tonne excavators with GPS machine control.",
+      "Excavators from 3.5 to 14 tonne with GPS machine control, backed by a grader, bulldozer, skid-steer loaders, a roller, a water truck and a range of trucks. The right machine for every stage of the job.",
   },
 ] as const;
 
