@@ -11,7 +11,7 @@ export function SiteFooter() {
             <h4>Wagga Civil &amp; Earthworks</h4>
             <p>
               Civil construction, earthworks and drainage across Wagga Wagga and
-              the Riverina. Built from {site.heritage.join(" and ")}.
+              the Riverina.
             </p>
             <p>
               {address.city} {address.state} {address.postcode}
