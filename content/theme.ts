@@ -17,7 +17,7 @@ export const theme = {
   // ---- The four brand colours ------------------------------
 
   /** Page background — the notebook-paper colour behind everything. */
-  paper: "#e1dfdf",
+  paper: "#ffffff",
 
   /** Main text colour, and the dark "Get a quote" button. */
   ink: "#000000",
