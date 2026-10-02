@@ -17,24 +17,24 @@ export const theme = {
   // ---- The four brand colours ------------------------------
 
   /** Page background — the notebook-paper colour behind everything. */
-  paper: "#ede5d6",
+  paper: "#e1dfdf",
 
   /** Main text colour, and the dark "Get a quote" button. */
-  ink: "#1b1e43",
+  ink: "#000000",
 
   /** The ballpoint blue — small labels, the hand-drawn ground line. */
-  pen: "#373887",
+  pen: "#c44a00",
 
   /** Safety orange — highlights, hover effects, the main call-to-action. */
-  hivis: "#ff6a13",
+  hivis: "#949494",
 
   // ---- Supporting tones ------------------------------------
 
   /** A slightly deeper paper: hovered rows, the service-page sidebar. */
-  paperDeep: "#e4dac7",
+  paperDeep: "#fffafa",
 
   /** The darkest shade, used for the "Why us" band and the footer. */
-  inkDeep: "#141733",
+  inkDeep: "#000000",
 
   /** Off-white used for text sitting on top of the dark bands. */
   paperTint: "#f4eee2",
@@ -43,7 +43,7 @@ export const theme = {
   stone: "#7c7566",
 
   /** Slightly softened ink for intro paragraphs. */
-  lead: "#33345a",
+  lead: "#5e5e6b",
 
   // ---- Text on the dark bands ------------------------------
   // Five steps from brightest to faintest. These sit on the dark
