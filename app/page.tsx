@@ -18,7 +18,7 @@ const work = [
   { src: "/images/work/grain-bunker-prep.jpg", col: "c6", ar: "ar169", t: "Grain bunker prep", loc: "Grader & water truck" },
   { src: "/images/work/slab-formwork.jpg", col: "c6", ar: "ar43", t: "Commercial slab & civil", loc: "Riverina" },
   { src: "/images/work/drainage-headwall.jpg", col: "c6", ar: "ar43", t: "Stormwater & headwall", loc: "Wagga Wagga" },
-  { src: "/images/work/machine-kobelco.jpg", col: "c4", ar: "ar45", t: "8t Kobelco", loc: "Site prep" },
+  { src: "/images/work/bulk-fill-cartage.jpg", col: "c4", ar: "ar45", t: "Bulk fill cartage", loc: "Tipper truck" },
   { src: "/images/work/survey-trimble.jpg", col: "c4", ar: "ar45", t: "GPS set-out", loc: "Trimble" },
   { src: "/images/work/retaining-wall.jpg", col: "c4", ar: "ar45", t: "Rock retaining wall", loc: "Wagga Wagga" },
   { src: "/images/work/bulk-pad.jpg", col: "c6", ar: "ar43", t: "Bulk earthworks pad", loc: "Junee" },
@@ -138,7 +138,7 @@ export default function Home() {
                     src={w.src}
                     alt={`${w.t}, ${w.loc}`}
                     fill
-                    sizes={w.col === "c12" ? "100vw" : w.col === "c6" ? "(max-width: 900px) 100vw, 50vw" : "(max-width: 900px) 100vw, 33vw"}
+                    sizes={w.col === "c12" ? "100vw" : w.col === "c6" ? "(max-width: 900px) 100vw, 50vw" : w.col === "c3" ? "(max-width: 900px) 100vw, 25vw" : "(max-width: 900px) 100vw, 33vw"}
                   />
                 </div>
                 <figcaption className="cap mono">
