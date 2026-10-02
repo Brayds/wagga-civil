@@ -126,8 +126,8 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head rv">
             <div>
-              <div className="k mono">Recent work · field record</div>
-              <h2>Real jobs, real ground.</h2>
+              <div className="k mono">Real jobs, real ground</div>
+              <h2>Recent Work</h2>
             </div>
           </div>
           <div className="work-grid">
