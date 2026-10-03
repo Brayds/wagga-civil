@@ -305,7 +305,7 @@ export const gear: GearItem[] = [
   { name: "Excavator", note: "14 tonne Kobelco", image: "/images/work/gear-excavator-14t.jpg" },
   { name: "Grader", note: "Final trim & roads", image: "/images/work/gear-grader.jpg" },
   { name: "Bulldozer", note: "Bulk push & spread", image: "/images/work/gear-bulldozer.jpg" },
-  { name: "Skid-steer loader", note: "ASV", image: "/images/work/gear-skid-steer.jpg" },
+  { name: "Skid-steer loader", note: "ASV", image: "/images/work/gear-skid-steer-asv.jpg" },
   { name: "Skid-steer loader", note: "CAT", image: "/images/work/gear-skid-steer-cat.jpg" },
   { name: "Roller", note: "Compaction" },
   { name: "Water truck", note: "Small" },
