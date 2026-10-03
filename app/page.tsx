@@ -75,7 +75,7 @@ export default function Home() {
         <div className="trust">
           <div className="wrap">
             <span className="mono">Est. in Riverina dirt</span>
-            <span className="mono">10+ years on the ground</span>
+            <span className="mono">20+ years combined experience</span>
             <span className="mono">GPS machine control</span>
             <span className="mono">Joll&apos;s + Prospec, one crew</span>
           </div>

@@ -91,7 +91,7 @@ export default function AboutPage() {
             <h3>The short version</h3>
             <ul>
               <li>Merger of {site.heritage.join(" + ")}</li>
-              <li>10+ years local to the Riverina</li>
+              <li>20+ years combined experience in the Riverina</li>
               <li>Owned fleet, GPS machine control</li>
               <li>Civil, earthworks, drainage &amp; road construction</li>
               <li>Based in Wagga Wagga</li>
