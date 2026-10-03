@@ -299,7 +299,7 @@ export const fleet: FleetItem[] = [
 // Leave `image` out and the card shows a "Photo coming soon" space.
 export type GearItem = { name: string; note?: string; image?: string };
 export const gear: GearItem[] = [
-  { name: "Excavator", note: "3.5 tonne Kobelco" },
+  { name: "Excavator", note: "3.5 tonne Kobelco", image: "/images/work/gear-excavator-3-5t.jpg" },
   { name: "Excavator", note: "5 tonne CAT" },
   { name: "Excavator", note: "8 tonne Kobelco", image: "/images/work/machine-kobelco.jpg" },
   { name: "Excavator", note: "14 tonne Kobelco", image: "/images/work/gear-excavator-14t.jpg" },
