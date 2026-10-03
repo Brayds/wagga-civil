@@ -121,7 +121,7 @@ export const services: Service[] = [
     slug: "detailed-excavation",
     title: "Detailed Excavation",
     summary:
-      "Precise footing, foundation and service excavation to the set-out, with clean batters and accurate levels.",
+      "Small digs to precise footing, foundation and service excavation, cut to the set-out with clean batters and accurate levels.",
     image: "/images/work/footing-excavation.jpg",
     heroImage: "/images/work/excavation-dig.jpg",
     keywords: ["excavation wagga wagga", "detailed excavation riverina", "footing excavation wagga"],
@@ -136,6 +136,7 @@ export const services: Service[] = [
       "From a single house footing to a full commercial pad and services, it's the same crew and the same standard. You get the person running the machine, not a sub you've never met.",
     ],
     includes: [
+      "Small excavations and tight-access digs",
       "Footings and foundation excavation to set-out",
       "Basement and cut-and-fill site cuts",
       "Service and drainage trenching",
