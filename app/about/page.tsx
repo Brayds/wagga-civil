@@ -131,7 +131,7 @@ export default function AboutPage() {
       <section className="band-ink">
         <div className="wrap">
           <div className="k mono">How we work</div>
-          <h2 className="why" style={{ fontSize: "clamp(1.8rem,3.4vw,2.7rem)", maxWidth: "24ch", margin: "14px 0 46px", color: "var(--paper-tint)" }}>
+          <h2 className="why" style={{ fontSize: "clamp(1.8rem,3.4vw,2.7rem)", margin: "14px 0 46px", color: "var(--paper-tint)" }}>
             The gear of a big civil outfit. The number that actually answers.
           </h2>
           <div className="why-cols">
