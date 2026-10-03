@@ -299,12 +299,17 @@ export const fleet: FleetItem[] = [
 // Leave `image` out and the card shows a "Photo coming soon" space.
 export type GearItem = { name: string; note: string; image?: string };
 export const gear: GearItem[] = [
-  { name: "Excavators", note: "3.5 to 14 tonne", image: "/images/work/machine-yard.jpg" },
+  { name: "Excavator", note: "3.5 tonne Kobelco" },
+  { name: "Excavator", note: "5 tonne CAT" },
+  { name: "Excavator", note: "8 tonne Kobelco", image: "/images/work/machine-kobelco.jpg" },
+  { name: "Excavator", note: "14 tonne Kobelco" },
   { name: "Grader", note: "Final trim & roads", image: "/images/work/gear-grader.jpg" },
   { name: "Bulldozer", note: "Bulk push & spread", image: "/images/work/gear-bulldozer.jpg" },
-  { name: "Skid-steer loaders", note: "Cart, level & clear", image: "/images/work/gear-skid-steer.jpg" },
+  { name: "Skid-steer loader", note: "ASV", image: "/images/work/gear-skid-steer.jpg" },
+  { name: "Skid-steer loader", note: "CAT" },
   { name: "Roller", note: "Compaction" },
-  { name: "Water truck", note: "Dust & moisture", image: "/images/work/gear-water-truck.jpg" },
+  { name: "Water truck", note: "Small" },
+  { name: "Water truck", note: "Large", image: "/images/work/gear-water-truck.jpg" },
   { name: "Trucks", note: "Cartage & fill", image: "/images/work/bulk-fill-cartage.jpg" },
   { name: "GPS machine control", note: "Trimble", image: "/images/work/survey-trimble.jpg" },
 ];
