@@ -9,6 +9,7 @@ import { extraPages, pageBySlug } from "@/content/pages";
 import { pageMetadata, breadcrumbJsonLd } from "@/lib/seo";
 import { GroundLine } from "../components/GroundLine";
 import { JsonLd } from "../components/JsonLd";
+import { ContactBadge } from "@/app/components/ContactBadge";
 
 export const dynamicParams = false;
 
@@ -94,6 +95,7 @@ export default async function ExtraPage({
                 <span className="cta">Call or text →</span>
               </a>
             ))}
+            <ContactBadge />
           </div>
         </div>
       </section>

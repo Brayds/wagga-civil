@@ -230,7 +230,8 @@ figure.rec .cap b { color: var(--ink); font-weight: 600; }
 .contact .wrap { padding: 84px 28px; }
 .contact .k { color: var(--hivis); }
 .contact h2 { color: var(--paper-tint); font-size: clamp(2rem, 4.4vw, 3.4rem); margin: 16px 0 40px; }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 760px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; align-items: center; }
+.contact-badge { justify-self: center; width: 100%; max-width: 220px; height: auto; }
 .ccard { background: var(--pen); border: 1px solid var(--pen); padding: 26px; transition: 0.18s; }
 .ccard .who { font-family: var(--font-mono); font-size: 1rem; letter-spacing: 0.16em; color: var(--ink-deep); text-transform: uppercase; font-weight: 600; }
 .ccard .ph { font-family: var(--font-archivo); font-stretch: 125%; font-weight: 700; font-size: 1.9rem; margin: 10px 0 4px; display: block; color: var(--ink-deep); }
@@ -312,6 +313,7 @@ figure.rec .cap b { color: var(--ink); font-weight: 600; }
   .why-cols { grid-template-columns: 1fr; gap: 30px; }
   .areas { grid-template-columns: 1fr; gap: 28px; }
   .contact-grid { grid-template-columns: 1fr; }
+  .contact-badge { max-width: 160px; }
   .fleet-list .row { grid-template-columns: 44px 1fr; }
   .fleet-list .row .fs { grid-column: 2; }
   .svc-hero { grid-template-columns: 1fr; gap: 26px; padding-block: 34px 8px; }

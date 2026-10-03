@@ -6,6 +6,7 @@ import { site, services, serviceBySlug } from "@/content/site";
 import { pageMetadata, serviceJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 import { GroundLine } from "../../components/GroundLine";
 import { JsonLd } from "../../components/JsonLd";
+import { ContactBadge } from "@/app/components/ContactBadge";
 
 export const dynamicParams = false;
 
@@ -159,6 +160,7 @@ export default async function ServicePage({
                 <span className="cta">Call or text →</span>
               </a>
             ))}
+            <ContactBadge />
           </div>
         </div>
       </section>

@@ -5,6 +5,7 @@ import { site, services } from "@/content/site";
 import { pageMetadata, breadcrumbJsonLd } from "@/lib/seo";
 import { GroundLine } from "../components/GroundLine";
 import { JsonLd } from "../components/JsonLd";
+import { ContactBadge } from "@/app/components/ContactBadge";
 
 export const metadata: Metadata = pageMetadata({
   title: "Services | Civil, Earthworks, Drainage & Road Construction",
@@ -77,6 +78,7 @@ export default function ServicesHub() {
                 <span className="cta">Call or text →</span>
               </a>
             ))}
+            <ContactBadge />
           </div>
         </div>
       </section>

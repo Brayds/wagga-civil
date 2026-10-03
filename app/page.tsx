@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { site, services, differentiators } from "@/content/site";
 import { GroundLine } from "./components/GroundLine";
+import { ContactBadge } from "@/app/components/ContactBadge";
 
 export const metadata: Metadata = {
   title: {
@@ -188,6 +189,7 @@ export default function Home() {
                 <span className="cta">Call or text →</span>
               </a>
             ))}
+            <ContactBadge />
           </div>
           <div className="cmeta">
             <a href={`mailto:${site.email}`}>✉ {site.email}</a>
