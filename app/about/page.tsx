@@ -90,6 +90,17 @@ export default function AboutPage() {
             </p>
           </div>
           <div>
+            <video
+              className="about-video"
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/images/about-drone-poster.jpg"
+              aria-label="Drone footage of a Wagga Civil and Earthworks job"
+            >
+              <source src="/videos/about-drone.mp4" type="video/mp4" />
+            </video>
             <Link className="btn primary" href="/services" style={{ width: "100%", justifyContent: "center" }}>
               See the services →
             </Link>
