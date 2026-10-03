@@ -55,15 +55,15 @@ export default function AboutPage() {
               delivering complete earthmoving and civil construction solutions
               across the Riverina.
             </p>
-          </div>
-          <div className="svc-body">
-          <div className="prose">
             <p>
               From residential site cuts and rural earthworks to commercial
               developments, subdivisions and large scale civil projects, we have
               the experience, equipment and capability to deliver every project
               safely, efficiently and to the highest standard.
             </p>
+          </div>
+          <div className="svc-body about-row1">
+          <div className="prose">
             <p>
               As a locally owned and operated business, we understand the
               Riverina&apos;s unique conditions. We know how local soils behave,
@@ -104,10 +104,10 @@ export default function AboutPage() {
               muted
               loop
               playsInline
-              poster="/images/about-clip-poster.jpg"
-              aria-label="Cab view from a Wagga Civil and Earthworks machine on the job"
+              poster="/images/hero-poster.jpg"
+              aria-label="Drone footage of the Wagga Civil and Earthworks crew on a job"
             >
-              <source src="/videos/about-clip.mp4" type="video/mp4" />
+              <source src="/videos/hero.mp4" type="video/mp4" />
             </video>
             <div className="prose">
             <p>
