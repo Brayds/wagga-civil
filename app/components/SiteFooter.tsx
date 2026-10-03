@@ -35,7 +35,6 @@ export function SiteFooter() {
               </a>
             ))}
             <a href={`mailto:${site.email}`}>{site.email}</a>
-            <p>{site.hours}, Riverina wide</p>
           </div>
         </div>
 
