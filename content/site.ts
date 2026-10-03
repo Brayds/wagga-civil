@@ -294,6 +294,21 @@ export const fleet: FleetItem[] = [
   { name: "5,000L water truck", note: "Dust & moisture" },
 ];
 
+// "Our gear" grid on the About page. One card per machine type.
+// To add a photo: put it in public/images/work/ and set `image` to its path.
+// Leave `image` out and the card shows a "Photo coming soon" space.
+export type GearItem = { name: string; note: string; image?: string };
+export const gear: GearItem[] = [
+  { name: "Excavators", note: "3.5 to 14 tonne", image: "/images/work/machine-yard.jpg" },
+  { name: "Grader", note: "Final trim & roads", image: "/images/work/gear-grader.jpg" },
+  { name: "Bulldozer", note: "Bulk push & spread", image: "/images/work/gear-bulldozer.jpg" },
+  { name: "Skid-steer loaders", note: "Cart, level & clear", image: "/images/work/gear-skid-steer.jpg" },
+  { name: "Roller", note: "Compaction" },
+  { name: "Water truck", note: "Dust & moisture", image: "/images/work/gear-water-truck.jpg" },
+  { name: "Trucks", note: "Cartage & fill", image: "/images/work/bulk-fill-cartage.jpg" },
+  { name: "GPS machine control", note: "Trimble", image: "/images/work/survey-trimble.jpg" },
+];
+
 export function serviceBySlug(slug: string): Service | undefined {
   return services.find((s) => s.slug === slug);
 }

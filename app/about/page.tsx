@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { site, differentiators } from "@/content/site";
+import { site, differentiators, gear } from "@/content/site";
 import { pageMetadata, breadcrumbJsonLd } from "@/lib/seo";
 import { GroundLine } from "../components/GroundLine";
 import { JsonLd } from "../components/JsonLd";
@@ -148,23 +148,32 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* machine portrait */}
+      {/* gear */}
       <section className="sec-pad">
         <div className="wrap">
-          <figure className="svc-hero-art" style={{ maxWidth: 720, margin: "0 auto" }}>
-            <div className="frame">
-              <Image
-                src="/images/work/machine-yard.jpg"
-                alt="Wagga Civil and Earthworks Kobelco excavator in the yard"
-                fill
-                sizes="(max-width: 900px) 100vw, 720px"
-              />
+          <div className="sec-head">
+            <div>
+              <div className="k mono">Owned and operated in-house</div>
+              <h2>Our Gear</h2>
             </div>
-            <figcaption className="cap mono" style={{ display: "flex", justifyContent: "space-between", padding: "10px 2px 0" }}>
-              <b>14t Kobelco</b>
-              <span>Wagga Wagga yard</span>
-            </figcaption>
-          </figure>
+          </div>
+          <div className="gear-grid">
+            {gear.map((g) => (
+              <figure key={g.name} className="rec">
+                <div className="frame ar43">
+                  {g.image ? (
+                    <Image src={g.image} alt={g.name} fill sizes="(max-width: 900px) 100vw, 25vw" />
+                  ) : (
+                    <div className="gear-empty mono">Photo coming soon</div>
+                  )}
+                </div>
+                <figcaption className="cap mono">
+                  <b>{g.name}</b>
+                  <span>{g.note}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
