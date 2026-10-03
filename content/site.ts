@@ -297,7 +297,7 @@ export const fleet: FleetItem[] = [
 // "Our gear" grid on the About page. One card per machine type.
 // To add a photo: put it in public/images/work/ and set `image` to its path.
 // Leave `image` out and the card shows a "Photo coming soon" space.
-export type GearItem = { name: string; note: string; image?: string };
+export type GearItem = { name: string; note?: string; image?: string };
 export const gear: GearItem[] = [
   { name: "Excavator", note: "3.5 tonne Kobelco" },
   { name: "Excavator", note: "5 tonne CAT" },
@@ -310,7 +310,9 @@ export const gear: GearItem[] = [
   { name: "Roller", note: "Compaction" },
   { name: "Water truck", note: "Small" },
   { name: "Water truck", note: "Large", image: "/images/work/gear-water-truck.jpg" },
-  { name: "Trucks", note: "Cartage & fill", image: "/images/work/bulk-fill-cartage.jpg" },
+  { name: "Truck", note: "Semi tipper", image: "/images/work/bulk-fill-cartage.jpg" },
+  { name: "Truck" },
+  { name: "Truck" },
   { name: "GPS machine control", note: "Trimble", image: "/images/work/survey-trimble.jpg" },
 ];
 

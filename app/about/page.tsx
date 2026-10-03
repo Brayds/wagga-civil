@@ -158,18 +158,18 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="gear-grid">
-            {gear.map((g) => (
-              <figure key={`${g.name}-${g.note}`} className="rec">
+            {gear.map((g, i) => (
+              <figure key={i} className="rec">
                 <div className="frame ar43">
                   {g.image ? (
-                    <Image src={g.image} alt={`${g.name}, ${g.note}`} fill sizes="(max-width: 900px) 100vw, 25vw" />
+                    <Image src={g.image} alt={g.note ? `${g.name}, ${g.note}` : g.name} fill sizes="(max-width: 900px) 100vw, 25vw" />
                   ) : (
                     <div className="gear-empty mono">Photo coming soon</div>
                   )}
                 </div>
                 <figcaption className="cap mono">
                   <b>{g.name}</b>
-                  <span>{g.note}</span>
+                  {g.note && <span>{g.note}</span>}
                 </figcaption>
               </figure>
             ))}
