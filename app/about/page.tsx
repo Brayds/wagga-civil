@@ -34,8 +34,10 @@ export default function AboutPage() {
           <h1>Two Riverina names you already know, now one crew.</h1>
           <p className="intro">
             Wagga Civil and Earthworks is the merger of {site.heritage[0]} and{" "}
-            {site.heritage[1]} — two trusted local names under one roof, run by the
-            same people the region has trusted for years.
+            {site.heritage[1]}.
+            <br />
+            Two trusted local names under one roof, run by the same people the
+            region has trusted for years.
           </p>
         </div>
       </section>
@@ -87,19 +89,11 @@ export default function AboutPage() {
               answered.
             </p>
           </div>
-          <aside className="scope">
-            <h3>The short version</h3>
-            <ul>
-              <li>Merger of {site.heritage.join(" + ")}</li>
-              <li>20+ years combined experience in the Riverina</li>
-              <li>Owned fleet, GPS machine control</li>
-              <li>Civil, earthworks, drainage &amp; road construction</li>
-              <li>Based in Wagga Wagga</li>
-            </ul>
+          <div>
             <Link className="btn primary" href="/services" style={{ width: "100%", justifyContent: "center" }}>
               See the services →
             </Link>
-          </aside>
+          </div>
         </div>
       </section>
 
