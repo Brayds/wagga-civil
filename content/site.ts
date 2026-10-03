@@ -206,8 +206,8 @@ export const services: Service[] = [
     shortTitle: "Trenching",
     summary:
       "Safe, accurate trenching for water, sewer, stormwater, power and comms — to depth, backfilled and compacted.",
-    image: "/images/work/drainage-headwall.jpg",
-    heroImage: "/images/work/drainage-headwall.jpg",
+    image: "/images/work/stormwater-pit-pipe.jpg",
+    heroImage: "/images/work/trenching-olive-grove.jpg",
     keywords: ["trenching wagga wagga", "utility trenching riverina", "service trenching wagga"],
     metaTitle: "Trenching Wagga Wagga | Plumbing, Electrical & Service Trenches",
     metaDescription:
