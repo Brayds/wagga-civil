@@ -99,9 +99,11 @@ a { color: inherit; text-decoration: none; }
 }
 .bar { display: flex; align-items: center; justify-content: space-between; height: 78px; }
 .hdr-contact { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.35; letter-spacing: 0.04em; font-variant-numeric: tabular-nums; }
-.hdr-contact a { color: var(--ink); }
-.hdr-contact a:hover { color: var(--pen); }
-.hdr-contact .nm { color: var(--pen); font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; }
+.hdr-contact a { color: var(--pen); }
+.hdr-contact a:hover { color: var(--ink); }
+.hdr-contact a[href^="mailto:"] { color: var(--ink); }
+.hdr-contact a[href^="mailto:"]:hover { color: var(--pen); }
+.hdr-contact .nm { font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; }
 .brand { display: flex; align-items: center; }
 .brand-logo { height: 52px; width: auto; display: block; }
 .nav { display: flex; gap: 30px; align-items: center; }
