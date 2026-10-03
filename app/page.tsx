@@ -55,9 +55,9 @@ export default function Home() {
             </h1>
             <p className="lead rv">
               Two trusted local trades, now one team on the ground. Ethan and
-              Angus bring 20+ years of combined experience to civil
-              construction, bulk earthworks, drainage and roads across Wagga
-              Wagga and the Riverina.
+              Angus bring 20+ years of combined experience, with the crew and
+              fleet to take on large-scale civil work across Wagga Wagga, the
+              Riverina and surrounding areas.
             </p>
             <div className="cta-row rv">
               <a className="btn primary" href="#contact">
