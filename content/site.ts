@@ -62,6 +62,7 @@ export const site = {
 // it here as well if you want it to sit in a particular spot.
 export type NavLink = { href: string; label: string };
 export const mainNav: NavLink[] = [
+  { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/#work", label: "Work" },
   { href: "/about", label: "About" },
