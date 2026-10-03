@@ -54,7 +54,8 @@ export default function Home() {
               <span className="l2">Small enough to care.</span>
             </h1>
             <p className="lead rv">
-              Two trusted local trades, now one team on the ground. Civil
+              Two trusted local trades, now one team on the ground. Ethan and
+              Angus bring 20+ years of combined experience to civil
               construction, bulk earthworks, drainage and roads across Wagga
               Wagga and the Riverina.
             </p>
