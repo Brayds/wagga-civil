@@ -98,17 +98,22 @@ export default function AboutPage() {
           </div>
           </div>
           <div className="svc-body about-row2">
-            <video
-              className="about-video"
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster="/images/hero-poster.jpg"
-              aria-label="Drone footage of the Wagga Civil and Earthworks crew on a job"
-            >
-              <source src="/videos/hero.mp4" type="video/mp4" />
-            </video>
+            <div>
+              <video
+                className="about-video"
+                autoPlay
+                muted
+                loop
+                playsInline
+                poster="/images/hero-poster.jpg"
+                aria-label="Drone footage of the Wagga Civil and Earthworks crew on a job"
+              >
+                <source src="/videos/hero.mp4" type="video/mp4" />
+              </video>
+              <a className="btn primary" href="#gear" style={{ width: "100%", justifyContent: "center" }}>
+                See the gear →
+              </a>
+            </div>
             <div className="prose">
             <p>
               Whether it&apos;s bulk earthworks, site preparation, road
@@ -149,7 +154,7 @@ export default function AboutPage() {
       </section>
 
       {/* gear */}
-      <section className="sec-pad">
+      <section className="sec-pad" id="gear">
         <div className="wrap">
           <div className="sec-head">
             <div>
