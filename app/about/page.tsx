@@ -32,7 +32,7 @@ export default function AboutPage() {
             <span>About</span>
           </div>
           <h1>Two Riverina names you already know, now one crew.</h1>
-          <p className="intro">
+          <p className="intro intro-feature">
             Wagga Civil and Earthworks is the merger of {site.heritage[0]} and{" "}
             {site.heritage[1]}.
             <br />
