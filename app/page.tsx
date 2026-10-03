@@ -107,8 +107,8 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head wide rv">
             <div>
-              <div className="k mono">What we do</div>
-              <h2>From a single house pad to full subdivision civil works.</h2>
+              <div className="k mono">From a single house pad to full subdivision civil works</div>
+              <h2>What We Do</h2>
             </div>
           </div>
           <div className="svc rv">
