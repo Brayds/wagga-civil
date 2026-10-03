@@ -197,7 +197,6 @@ export default function Home() {
             <span>
               ◈ {site.address.city} {site.address.state} {site.address.postcode}
             </span>
-            <span>{site.hours} · Riverina wide</span>
           </div>
         </div>
       </section>
