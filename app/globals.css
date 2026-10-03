@@ -296,7 +296,7 @@ figure.rec .cap b { color: var(--ink); font-weight: 600; }
 /* generic page intro */
 .page-hero { padding: 60px 0 30px; }
 .page-hero h1 { font-size: clamp(2.4rem, 5vw, 4rem); margin: 0 0 20px; }
-.page-hero .intro { font-size: 1.2rem; max-width: 52ch; color: var(--lead); }
+.page-hero .intro { font-size: 1.2rem; color: var(--lead); }
 .measure { max-width: 62ch; }
 .measure p { font-size: 1.08rem; margin: 0 0 22px; }
 
