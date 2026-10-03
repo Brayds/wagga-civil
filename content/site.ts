@@ -73,9 +73,9 @@ export const differentiators = [
   {
     key: "local",
     label: "Local",
-    title: "A decade in Riverina dirt",
+    title: "Family-run, Riverina based",
     body:
-      "We know the local ground: the red clay, the fall of a Wagga block, the council specs. No learning your site on your budget.",
+      "A local family business that knows the ground: the red clay, the fall of a Wagga block, the council specs. No learning your site on your budget.",
   },
   {
     key: "trusted",
