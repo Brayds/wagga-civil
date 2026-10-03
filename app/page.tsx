@@ -95,6 +95,11 @@ export default function Home() {
                 </div>
                 <h3>{d.title}</h3>
                 <p>{d.body}</p>
+                {d.key === "precise" && (
+                  <Link className="why-link mono" href="/about#gear">
+                    See our gear →
+                  </Link>
+                )}
               </div>
             ))}
           </div>

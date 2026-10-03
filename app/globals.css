@@ -46,7 +46,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 120px; }
 
 body {
   margin: 0;
@@ -219,6 +219,8 @@ figure.rec .cap b { color: var(--ink); font-weight: 600; }
 .band-paper .why-cols h3 { color: var(--ink); }
 .band-paper .why-cols p { color: var(--lead); }
 .band-paper .ground { color: var(--pen); }
+.why-link { display: inline-block; margin-top: 14px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pen); border-bottom: 2px solid currentColor; padding-bottom: 2px; }
+.why-link:hover { color: var(--ink); }
 
 /* fleet spec */
 .fleet-list { border-top: 2px solid var(--ink); }
@@ -340,6 +342,7 @@ figure.rec .cap b { color: var(--ink); font-weight: 600; }
   .sec-pad { padding: 60px 0; }
   /* mobile drawer */
   .bar { height: 78px; }
+  html { scroll-padding-top: 96px; }
   .brand-logo { height: 44px; }
   .drawer.open { display: block; position: fixed; inset: 78px 0 0; z-index: 39; background: var(--paper); padding: 30px 28px; }
   .drawer.open a { display: block; font-family: var(--font-archivo); font-stretch: 125%; font-weight: 700; font-size: 1.8rem; padding: 16px 0; border-bottom: 1px solid var(--pen-line); }
