@@ -35,9 +35,14 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <a className="callbtn desktop" href={`tel:${primary.tel}`}>
-          ▚ Get a quote
-        </a>
+        <div className="hdr-contact">
+          {[...site.contacts].reverse().map((c) => (
+            <a key={c.tel} href={`tel:${c.tel}`}>
+              <span className="nm">{c.name}</span> {c.phone}
+            </a>
+          ))}
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+        </div>
 
         <button
           className="callbtn menutoggle"

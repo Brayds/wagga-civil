@@ -98,6 +98,10 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid var(--pen-line);
 }
 .bar { display: flex; align-items: center; justify-content: space-between; height: 78px; }
+.hdr-contact { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.35; letter-spacing: 0.04em; font-variant-numeric: tabular-nums; }
+.hdr-contact a { color: var(--ink); }
+.hdr-contact a:hover { color: var(--pen); }
+.hdr-contact .nm { color: var(--pen); font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; }
 .brand { display: flex; align-items: center; }
 .brand-logo { height: 52px; width: auto; display: block; }
 .nav { display: flex; gap: 30px; align-items: center; }
@@ -302,6 +306,7 @@ figure.rec .cap b { color: var(--ink); font-weight: 600; }
 @media (max-width: 900px) {
   .nav { display: none; }
   .callbtn.desktop { display: none; }
+  .hdr-contact { display: none; }
   .menutoggle { display: inline-flex; }
   .hero-grid { grid-template-columns: 1fr; min-height: 62vh; padding-block: 44px 20px; }
   .hero-scrim {
