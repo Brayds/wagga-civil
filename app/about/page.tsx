@@ -45,8 +45,8 @@ export default function AboutPage() {
       <GroundLine />
 
       <section className="sec-pad">
-        <div className="wrap svc-body">
-          <div className="prose">
+        <div className="wrap">
+          <div className="prose about-lead">
             <p>
               Wagga Civil &amp; Earthworks brings together the experience and
               reputation of two locally owned businesses, Prospec Earthworks and
@@ -55,6 +55,9 @@ export default function AboutPage() {
               delivering complete earthmoving and civil construction solutions
               across the Riverina.
             </p>
+          </div>
+          <div className="svc-body">
+          <div className="prose">
             <p>
               From residential site cuts and rural earthworks to commercial
               developments, subdivisions and large scale civil projects, we have
@@ -76,18 +79,6 @@ export default function AboutPage() {
               not dry-hired, giving us complete control over quality, scheduling and
               workmanship from the first cut to the final trim.
             </p>
-            <p>
-              Whether it&apos;s bulk earthworks, site preparation, road
-              construction, drainage, subdivisions, commercial developments or
-              rural projects, our experienced operators take pride in delivering
-              work that&apos;s built to last.
-            </p>
-            <p>
-              Big enough to deliver subdivision civil works, commercial developments
-              and large scale earthworks. Small enough that the person who quotes
-              your job is the one overseeing it, and when you call, the phone gets
-              answered.
-            </p>
           </div>
           <div>
             <video
@@ -104,6 +95,34 @@ export default function AboutPage() {
             <Link className="btn primary" href="/services" style={{ width: "100%", justifyContent: "center" }}>
               See the services →
             </Link>
+          </div>
+          </div>
+          <div className="svc-body about-row2">
+            <video
+              className="about-video"
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/images/about-clip-poster.jpg"
+              aria-label="Cab view from a Wagga Civil and Earthworks machine on the job"
+            >
+              <source src="/videos/about-clip.mp4" type="video/mp4" />
+            </video>
+            <div className="prose">
+            <p>
+              Whether it&apos;s bulk earthworks, site preparation, road
+              construction, drainage, subdivisions, commercial developments or
+              rural projects, our experienced operators take pride in delivering
+              work that&apos;s built to last.
+            </p>
+            <p>
+              Big enough to deliver subdivision civil works, commercial developments
+              and large scale earthworks. Small enough that the person who quotes
+              your job is the one overseeing it, and when you call, the phone gets
+              answered.
+            </p>
+            </div>
           </div>
         </div>
       </section>
