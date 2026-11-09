@@ -70,6 +70,27 @@ gtag('js', new Date());
 gtag('config', 'G-Z73C61SZ33');`,
           }}
         />
+        {/* Key-event tracking: one listener for every phone and email link on
+            the site, so links on new pages are covered automatically. Sends
+            'phone_call' (with who was called) and 'email_click' to Analytics.
+            Nothing visible changes and the link still opens as normal. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){
+var names=${JSON.stringify(
+              Object.fromEntries(site.contacts.map((c) => [c.tel, c.name]))
+            )};
+document.addEventListener('click',function(e){
+var a=e.target&&e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');
+if(!a||typeof gtag!=='function')return;
+var href=a.getAttribute('href');var page=location.pathname;
+if(href.indexOf('tel:')===0){var tel=href.slice(4);
+gtag('event','phone_call',{contact_name:names[tel]||'Other',phone_number:tel,page_path:page,transport_type:'beacon'});}
+else{gtag('event','email_click',{email_address:href.slice(7),page_path:page,transport_type:'beacon'});}
+},true);
+})();`,
+          }}
+        />
       </head>
       <body>
         <JsonLd data={[localBusinessJsonLd(), websiteJsonLd()]} />
